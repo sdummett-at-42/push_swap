@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/16 21:28:05 by sdummett         ###   ########.fr        #
+#    Updated: 2021/08/17 20:59:28 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ CC			= clang
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= push_swap
 SRC			= push_swap.c \
+			  stacks_utils.c \
 			  ft_atoi.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)

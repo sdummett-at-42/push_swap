@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/16 21:40:38 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/17 21:02:28 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int	ft_atoi(const char *str);
-
 typedef struct s_stacks
 {
 	int	*a;
@@ -27,6 +25,11 @@ typedef struct s_stacks
 	unsigned int	nb_elem_a;
 	unsigned int	nb_elem_b;
 }	t_stacks;
+
+int	ft_atoi(const char *str);
+void	init_stacks(t_stacks *stacks, char **av);
+t_stacks	*create_stacks(int ac);
+void	print_stacks(t_stacks *stacks);
 
 #endif
 
