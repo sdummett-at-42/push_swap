@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   swap_a_b.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/17 21:02:28 by sdummett         ###   ########.fr       */
+/*   Created: 2021/08/17 23:27:23 by sdummett          #+#    #+#             */
+/*   Updated: 2021/08/17 23:33:31 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+#include "push_swap.h"
 
-# include <stdio.h> // <- to delete
-# include <unistd.h>
-# include <stdlib.h>
+/*
+** Instruction : ss
+*/
 
-typedef struct s_stacks
+void	swap_a_b(t_stacks *stacks)
 {
-	int	*a;
-	int	*b;
-	unsigned int	nb_elem_total;
-	unsigned int	nb_elem_a;
-	unsigned int	nb_elem_b;
-}	t_stacks;
-
-int	ft_atoi(const char *str);
-void	init_stacks(t_stacks *stacks, char **av);
-t_stacks	*create_stacks(int ac);
-void	print_stacks(t_stacks *stacks);
-
-#endif
-
+	swap_a(stacks);
+	swap_b(stacks);
+}

@@ -6,11 +6,17 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/17 20:58:33 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/17 23:30:41 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	print_nb_stacks(t_stacks *stacks)
+{
+	printf("a : %d | b : %d\n", stacks->nb_elem_a, stacks->nb_elem_b);
+	fflush(stdout);
+}
 
 int main(int ac, char **av)
 {
@@ -19,7 +25,15 @@ int main(int ac, char **av)
 
 	stacks = create_stacks(ac);
 	init_stacks(stacks, av);
+	print_stacks(stacks);
 	printf("Hello world!\n");
+	print_nb_stacks(stacks);
+	swap_a(stacks);
+	print_stacks(stacks);
+	swap_b(stacks);
+	print_stacks(stacks);
+	swap_a_b(stacks);
+	print_stacks(stacks);
 	return (0);
 }
 
