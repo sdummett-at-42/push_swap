@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/16 22:10:01 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/17 20:54:37 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void	print_stacks(t_stacks *stacks)
 			printf(" \n");
 		i++;
 	}
+	printf("- -\n");
+	printf("a b\n");
 }
 
 t_stacks	*create_stacks(int ac)
