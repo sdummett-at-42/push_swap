@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/19 18:05:07 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/19 18:47:20 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,24 @@ int main(int ac, char **av)
 	// print_nb_stacks(stacks);
 	// swap_a(stacks);
 	// print_stacks(stacks);
+	push_b(stacks);
+	print_stacks(stacks);
+	push_b(stacks);
+	print_stacks(stacks);
+	push_b(stacks);
+	print_stacks(stacks);
+	push_b(stacks);
+	print_stacks(stacks);
+	push_b(stacks);
+	print_stacks(stacks);
+	push_a(stacks);
+	print_stacks(stacks);
+	push_a(stacks);
+	print_stacks(stacks);
+	push_a(stacks);
+	print_stacks(stacks);
+	push_a(stacks);
+	print_stacks(stacks);
 	push_b(stacks);
 	print_stacks(stacks);
 	return (0);
