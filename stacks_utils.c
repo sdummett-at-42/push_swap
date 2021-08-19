@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 20:57:34 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/17 23:12:18 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/19 18:10:38 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	print_stacks(t_stacks *stacks)
 	{
 		if (index_a > 0)
 		{
+			printf("index : %d |", index_a - 1);
 			printf("%d", stacks->a[index_a - 1]);
 			index_a--;
 		}
@@ -40,8 +41,9 @@ void	print_stacks(t_stacks *stacks)
 			printf(" \n");
 		i++;
 	}
-	printf("- -\n");
-	printf("a b\n");
+	printf("b[0]:%d\n", stacks->b[0]);
+	printf("           - -\n");
+	printf("           a b\n");
 }
 
 t_stacks	*create_stacks(int ac)
@@ -57,15 +59,15 @@ t_stacks	*create_stacks(int ac)
 	return (stacks);
 }
 
-void	init_stacks(t_stacks *stacks, char **av)
+void	init_stacks(t_stacks *stacks, int ac, char **av)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (i != stacks->nb_elem_total)
 	{
-		stacks->a[i] = ft_atoi(av[i + 1]);
+		stacks->a[i] = ft_atoi(av[ac - 1]);
+		ac--;
 		i++;
 	}
 }
-

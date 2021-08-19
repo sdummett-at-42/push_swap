@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/19 18:05:07 by sdummett         ###   ########.fr       */
+/*   Created: 2021/08/19 17:33:58 by sdummett          #+#    #+#             */
+/*   Updated: 2021/08/19 18:15:34 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_nb_stacks(t_stacks *stacks)
+/*
+** Instruction : pa
+*/
+
+void	push_a(t_stacks *stacks)
 {
-	printf("a : %d | b : %d\n", stacks->nb_elem_a, stacks->nb_elem_b);
-	fflush(stdout);
+	if (stacks->nb_elem_b > 0)
+	{
+		stacks->a[stacks->nb_elem_a] = stacks->b[stacks->nb_elem_b - 1];
+		stacks->nb_elem_a++;
+		stacks->nb_elem_b--;
+		write(1, "pa\n", 3);
+	}
 }
-
-int main(int ac, char **av)
-{
-	t_stacks	*stacks;
-	(void)av;
-
-	stacks = create_stacks(ac);
-	init_stacks(stacks, ac, av);
-	print_stacks(stacks);
-	// print_nb_stacks(stacks);
-	// swap_a(stacks);
-	// print_stacks(stacks);
-	push_b(stacks);
-	print_stacks(stacks);
-	return (0);
-}
-

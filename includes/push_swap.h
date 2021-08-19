@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/17 23:29:45 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/19 17:40:38 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_stacks
 }	t_stacks;
 
 int	ft_atoi(const char *str);
-void	init_stacks(t_stacks *stacks, char **av);
+void	init_stacks(t_stacks *stacks,int ac, char **av);
 t_stacks	*create_stacks(int ac);
 void	print_stacks(t_stacks *stacks);
 
@@ -38,6 +38,8 @@ void	print_stacks(t_stacks *stacks);
 void	swap_a(t_stacks *stacks);
 void	swap_b(t_stacks *stacks);
 void	swap_a_b(t_stacks *stacks);
+void	push_a(t_stacks *stacks);
+void	push_b(t_stacks *stacks);
 
 #endif
 
