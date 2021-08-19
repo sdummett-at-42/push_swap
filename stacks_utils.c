@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 20:57:34 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/19 18:45:19 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/19 19:12:37 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	stack_a_gt_b(t_stacks *stacks)
 	{
 		if (index_a > 0)
 		{
-			printf("index : %d |", index_a - 1);
+			printf("index : %d | ", index_a - 1);
 			printf("%d", stacks->a[index_a - 1]);
 			index_a--;
 		}
@@ -41,8 +41,8 @@ void	stack_a_gt_b(t_stacks *stacks)
 			printf(" \n");
 		i++;
 	}
-	printf("           - -\n");
-	printf("           a b\n");
+	printf("            - -\n");
+	printf("            a b\n");
 }
 
 void	stack_b_gt_a(t_stacks *stacks)
@@ -58,13 +58,13 @@ void	stack_b_gt_a(t_stacks *stacks)
 	{
 		if (index_a > 0 && index_a == index_b)
 		{
-			printf("index : %d |", index_a - 1);
+			printf("index : %d | ", index_a - 1);
 			printf("%d", stacks->a[index_a - 1]);
 			index_a--;
 		}
 		else
 		{
-			printf("index : %d |", index_b - 1);
+			printf("index : %d | ", index_b - 1);
 			printf(" ");
 		}
 		printf(" ");
@@ -77,8 +77,8 @@ void	stack_b_gt_a(t_stacks *stacks)
 			printf(" \n");
 		i++;
 	}
-	printf("           - -\n");
-	printf("           a b\n");
+	printf("            - -\n");
+	printf("            a b\n");
 }
 
 void	print_stacks(t_stacks *stacks)

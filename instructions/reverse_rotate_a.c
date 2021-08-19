@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_a.c                                           :+:      :+:    :+:   */
+/*   reverse_rotate_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 22:12:39 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/19 19:13:19 by sdummett         ###   ########.fr       */
+/*   Created: 2021/08/19 19:10:43 by sdummett          #+#    #+#             */
+/*   Updated: 2021/08/19 19:20:44 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
-** Instruction : sa
-*/
-
-void	swap_a(t_stacks *stacks)
+void	reverse_rotate_a(t_stacks *stacks)
 {
-	int	tmp;
+	int				tmp;
+	unsigned int	i;
 
-	if (stacks->nb_elem_a > 1)
+	if (stacks->nb_elem_a < 2)
+		return ;
+	i = 0;
+	tmp = stacks->a[i];
+	while (i < stacks->nb_elem_a - 1)
 	{
-		tmp = stacks->a[stacks->nb_elem_a - 1];
-		stacks->a[stacks->nb_elem_a - 1] = stacks->a[stacks->nb_elem_a - 2];
-		stacks->a[stacks->nb_elem_a - 2] = tmp; 
+		stacks->a[i] = stacks->a[i +1];
+		i++;
 	}
+	stacks->a[i] = tmp;
+	write(1, "rra\n", 4);
 }

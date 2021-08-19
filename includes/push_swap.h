@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/19 17:40:38 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/19 19:19:55 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ void	swap_b(t_stacks *stacks);
 void	swap_a_b(t_stacks *stacks);
 void	push_a(t_stacks *stacks);
 void	push_b(t_stacks *stacks);
+void	rotate_a(t_stacks *stacks);
+void	rotate_b(t_stacks *stacks);
+void	rotate_a_b(t_stacks *stacks);
+void	reverse_rotate_a(t_stacks *stacks);
+void	reverse_rotate_b(t_stacks *stacks);
+void	reverse_rotate_a_b(t_stacks *stacks);
 
 #endif
-

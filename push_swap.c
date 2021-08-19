@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/19 18:47:20 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/19 19:24:28 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	print_nb_stacks(t_stacks *stacks)
 int main(int ac, char **av)
 {
 	t_stacks	*stacks;
-	(void)av;
 
 	stacks = create_stacks(ac);
 	init_stacks(stacks, ac, av);
@@ -37,18 +36,9 @@ int main(int ac, char **av)
 	print_stacks(stacks);
 	push_b(stacks);
 	print_stacks(stacks);
-	push_b(stacks);
+	rotate_a_b(stacks);
 	print_stacks(stacks);
-	push_a(stacks);
-	print_stacks(stacks);
-	push_a(stacks);
-	print_stacks(stacks);
-	push_a(stacks);
-	print_stacks(stacks);
-	push_a(stacks);
-	print_stacks(stacks);
-	push_b(stacks);
+	reverse_rotate_a_b(stacks);
 	print_stacks(stacks);
 	return (0);
 }
-
