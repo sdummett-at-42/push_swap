@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 20:57:34 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/19 19:12:37 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/20 16:34:29 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,15 +101,20 @@ t_stacks	*create_stacks(int ac)
 	return (stacks);
 }
 
-void	init_stacks(t_stacks *stacks, int ac, char **av)
+int	init_stacks(t_stacks *stacks, int ac, char **av)
 {
 	unsigned int	i;
+	unsigned char	overflow;
 
 	i = 0;
+	overflow = 0;
 	while (i != stacks->nb_elem_total)
 	{
-		stacks->a[i] = ft_atoi(av[ac - 1]);
+		stacks->a[i] = ft_atoi(av[ac - 1], &overflow);
+		if (overflow == 1)
+			return (1);
 		ac--;
 		i++;
 	}
+	return (0);
 }
