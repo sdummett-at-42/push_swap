@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 17:06:12 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/20 17:28:09 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ void		reverse_rotate_a_b(t_stacks *stacks);
 */
 
 int	is_number(char *arg);
+int	no_num_dup(t_stacks *stacks);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 16:40:14 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/20 17:27:32 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@ int main(int ac, char **av)
 
 	stacks = create_stacks(ac);
 	if (init_stacks(stacks, ac, av) == 1)
+	{
+		write(2, "Error\n", 6);
+		return (0);
+	}
+	if (no_num_dup(stacks) == 1)
 	{
 		write(2, "Error\n", 6);
 		return (0);
