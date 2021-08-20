@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 17:27:32 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/20 18:25:33 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ void	print_nb_stacks(t_stacks *stacks)
 	printf("a : %d | b : %d\n", stacks->nb_elem_a, stacks->nb_elem_b);
 	fflush(stdout);
 }
+
+// void	parse_args(int ac, char *av)
+// {
+	
+// }
 
 int main(int ac, char **av)
 {

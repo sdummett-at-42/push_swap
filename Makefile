@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/20 17:28:18 by sdummett         ###   ########.fr        #
+#    Updated: 2021/08/20 18:36:35 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,6 @@ CC			= clang
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= push_swap
 SRC			= push_swap.c \
-			  stacks_utils.c \
 			  instructions/swap_a.c \
 			  instructions/swap_b.c \
 			  instructions/swap_a_b.c \
@@ -32,9 +31,17 @@ SRC			= push_swap.c \
 			  instructions/reverse_rotate_a.c \
 			  instructions/reverse_rotate_b.c \
 			  instructions/reverse_rotate_a_b.c \
-			  is_number.c \
-			  no_num_dup.c \
-			  ft_atoi.c
+			  lst/ft_lstnew.c \
+			  lst/ft_lstadd_back.c \
+			  lst/ft_lstclear.c \
+			  utils/ft_calloc.c \
+			  utils/ft_bzero.c \
+			  utils/is_number.c \
+			  utils/no_num_dup.c \
+			  utils/ft_split.c \
+			  utils/ft_atoi.c \
+			  stacks/print_stacks.c \
+			  stacks/stacks_utils.c	  
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)
