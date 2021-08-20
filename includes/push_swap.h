@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 18:35:00 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/20 19:03:51 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,5 @@ void		ft_bzero(void *b, size_t len);
 int			is_number(char *arg);
 int			no_num_dup(t_stacks *stacks);
 char		**ft_split(char const *s, char c);
-
-/*
-** Linked list funcs
-*/
-
-void		ft_lstadd_back(t_list **alst, t_list *new);
-void		ft_lstclear(t_list **lst, void (*del)(void *));
-t_list		*ft_lstnew(void *content);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 18:25:33 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/20 19:09:47 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,12 @@ void	print_nb_stacks(t_stacks *stacks)
 	fflush(stdout);
 }
 
-// void	parse_args(int ac, char *av)
-// {
-	
-// }
-
 int main(int ac, char **av)
 {
 	t_stacks	*stacks;
 
 	stacks = create_stacks(ac);
-	if (init_stacks(stacks, ac, av) == 1)
+	if (init_stacks(stacks, ac, av) == 1 || ac < 2)
 	{
 		write(2, "Error\n", 6);
 		return (0);
