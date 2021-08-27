@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 20:57:34 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 18:32:25 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/27 22:31:00 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	init_stacks(t_stacks *stacks, int ac, char **av)
 			return (1);
 		stacks->a[i] = ft_atoi(av[ac - 1], &overflow);
 		if (overflow == 1)
-			return (1);
+			return (-1);
 		ac--;
 		i++;
 	}

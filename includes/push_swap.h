@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 19:03:51 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/27 22:26:06 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,15 @@ void		reverse_rotate_a_b(t_stacks *stacks);
 void		*ft_calloc(size_t nmemb, size_t size);
 void		ft_bzero(void *b, size_t len);
 int			is_number(char *arg);
-int			no_num_dup(t_stacks *stacks);
+int			has_duplicates(t_stacks *stacks);
 char		**ft_split(char const *s, char c);
+int			is_sorted(t_stacks *stacks);
+void		clean_exit(t_stacks *stacks);
+
+/*
+** Algorithm
+*/
+
+void		my_sort(t_stacks *stacks);
 
 #endif
