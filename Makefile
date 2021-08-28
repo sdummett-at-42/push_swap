@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/27 22:26:55 by sdummett         ###   ########.fr        #
+#    Updated: 2021/08/28 21:50:22 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 #                                      #
 # ************************************ #
 
-CC			= clang
+CC			= clang -g3 #-fsanitize=address
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= push_swap
 SRC			= push_swap.c \
@@ -38,7 +38,7 @@ SRC			= push_swap.c \
 			  utils/clean_exit.c \
 			  stacks/print_stacks.c \
 			  stacks/stacks_utils.c \
-			  algorithm/sorting_algorithm.c
+			  algorithm/ugly_algorithm.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)

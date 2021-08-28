@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/27 22:34:12 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/28 21:48:27 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ int main(int ac, char **av)
 	if (is_sorted(stacks))
 	{
 		print_stacks(stacks);
-		printf("Stack A is already sorted\n"); // <- tmp
+		//printf("Stack A is already sorted\n"); // <- tmp
 		clean_exit(stacks);
 	}
-	print_stacks(stacks);
+//	print_stacks(stacks);
+	ugly_sort(stacks);
 	clean_exit(stacks);
 }

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/27 22:26:06 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/28 21:48:58 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,6 @@ void		clean_exit(t_stacks *stacks);
 ** Algorithm
 */
 
-void		my_sort(t_stacks *stacks);
+void		ugly_sort(t_stacks *stacks);
 
 #endif
