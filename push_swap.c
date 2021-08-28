@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 19:09:47 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/28 21:48:27 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,31 +23,23 @@ int main(int ac, char **av)
 	t_stacks	*stacks;
 
 	stacks = create_stacks(ac);
-	if (init_stacks(stacks, ac, av) == 1 || ac < 2)
+	if (init_stacks(stacks, ac, av) < 0 || ac < 2)
 	{
 		write(2, "Error\n", 6);
-		return (0);
+		clean_exit(stacks);
 	}
-	if (no_num_dup(stacks) == 1)
+	if (has_duplicates(stacks) == 1)
 	{
 		write(2, "Error\n", 6);
-		return (0);
+		clean_exit(stacks);
 	}
-	print_stacks(stacks);
-	// print_nb_stacks(stacks);
-	// swap_a(stacks);
-	// print_stacks(stacks);
-	push_b(stacks);
-	print_stacks(stacks);
-	push_b(stacks);
-	print_stacks(stacks);
-	push_b(stacks);
-	print_stacks(stacks);
-	push_b(stacks);
-	print_stacks(stacks);
-	rotate_a_b(stacks);
-	print_stacks(stacks);
-	reverse_rotate_a_b(stacks);
-	print_stacks(stacks);
-	return (0);
+	if (is_sorted(stacks))
+	{
+		print_stacks(stacks);
+		//printf("Stack A is already sorted\n"); // <- tmp
+		clean_exit(stacks);
+	}
+//	print_stacks(stacks);
+	ugly_sort(stacks);
+	clean_exit(stacks);
 }

@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:13:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/16 20:15:58 by sdummett         ###   ########.fr        #
+#    Updated: 2021/08/28 21:38:30 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,4 +14,5 @@
 *.o
 *.a
 push_swap
+push_swap_visualizer
 

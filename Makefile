@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/20 19:05:39 by sdummett         ###   ########.fr        #
+#    Updated: 2021/08/28 21:50:22 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 #                                      #
 # ************************************ #
 
-CC			= clang
+CC			= clang -g3 #-fsanitize=address
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= push_swap
 SRC			= push_swap.c \
@@ -32,10 +32,13 @@ SRC			= push_swap.c \
 			  instructions/reverse_rotate_b.c \
 			  instructions/reverse_rotate_a_b.c \
 			  utils/is_number.c \
-			  utils/no_num_dup.c \
+			  utils/has_duplicates.c \
 			  utils/ft_atoi.c \
+			  utils/is_sorted.c \
+			  utils/clean_exit.c \
 			  stacks/print_stacks.c \
-			  stacks/stacks_utils.c	  
+			  stacks/stacks_utils.c \
+			  algorithm/ugly_algorithm.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)
