@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/28 21:48:58 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/30 17:18:37 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+/*
+** Structure for holding the two stacks
+*/
+
 typedef struct s_stacks
 {
 	int	*a;
@@ -26,11 +30,15 @@ typedef struct s_stacks
 	unsigned int	nb_elem_b;
 }	t_stacks;
 
-typedef struct	s_list
+/*
+** Structure for finding the median
+*/
+
+typedef struct s_median
 {
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+	int				*list;
+	unsigned int	total;
+}	t_median;
 
 /*
 ** Stacks funcs
@@ -75,5 +83,7 @@ void		clean_exit(t_stacks *stacks);
 */
 
 void		ugly_sort(t_stacks *stacks);
+
+int			get_median(t_stacks *stacks);
 
 #endif

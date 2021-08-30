@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/28 21:48:27 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/30 18:25:57 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int main(int ac, char **av)
 		clean_exit(stacks);
 	}
 //	print_stacks(stacks);
-	ugly_sort(stacks);
+//	ugly_sort(stacks);
+	int median = get_median(stacks);
+	printf("median is %d\n", median);
 	clean_exit(stacks);
 }
