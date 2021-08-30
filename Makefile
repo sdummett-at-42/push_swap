@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/30 18:36:56 by sdummett         ###   ########.fr        #
+#    Updated: 2021/08/30 19:14:28 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,10 +36,11 @@ SRC			= push_swap.c \
 			  utils/ft_atoi.c \
 			  utils/is_sorted.c \
 			  utils/clean_exit.c \
-			  utils/get_median.c \
 			  stacks/print_stacks.c \
 			  stacks/stacks_utils.c \
-			  algorithm/ugly_algorithm.c
+			  algorithm/done/ugly_algorithm.c \
+			  algorithm/sort_stack_a.c \
+			  algorithm/get_median.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)

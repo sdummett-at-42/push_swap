@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_exit.c                                       :+:      :+:    :+:   */
+/*   get_median.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/27 22:22:01 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/30 19:21:32 by sdummett         ###   ########.fr       */
+/*   Created: 2021/08/30 17:08:00 by sdummett          #+#    #+#             */
+/*   Updated: 2021/08/30 19:12:09 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	clean_exit(t_stacks *stacks)
+/*
+** Compute and return the median of the inital stack a
+*/
+
+int	get_median(t_sorted *sorted)
 {
-	free(stacks->a);
-	free(stacks->b);
-	free(stacks->sorted->list);
-	free(stacks->sorted);
-	free(stacks);
-	exit(0);
+	unsigned int			index_median;
+	int						median;
+
+	index_median = (sorted->total + 1) / 2;
+	if (index_median % 2 == 0)
+		median = sorted->list[index_median - 1];
+	else
+		median = (sorted->list[index_median - 1] + sorted->list[index_median]) / 2;
+	return (median);
 }

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/30 17:18:37 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/30 19:11:36 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@
 # include <stdio.h> // <- to delete
 # include <unistd.h>
 # include <stdlib.h>
+
+/*
+** Structure to get the numbers sorted
+*/
+
+typedef struct s_sorted
+{
+	int				*list;
+	unsigned int	total;
+}	t_sorted;
 
 /*
 ** Structure for holding the two stacks
@@ -28,17 +38,8 @@ typedef struct s_stacks
 	unsigned int	nb_elem_total;
 	unsigned int	nb_elem_a;
 	unsigned int	nb_elem_b;
+	t_sorted		*sorted;
 }	t_stacks;
-
-/*
-** Structure for finding the median
-*/
-
-typedef struct s_median
-{
-	int				*list;
-	unsigned int	total;
-}	t_median;
 
 /*
 ** Stacks funcs
@@ -84,6 +85,7 @@ void		clean_exit(t_stacks *stacks);
 
 void		ugly_sort(t_stacks *stacks);
 
-int			get_median(t_stacks *stacks);
+t_sorted	*sort_stack_a(t_stacks *stacks);
+int			get_median(t_sorted *sorted);
 
 #endif
