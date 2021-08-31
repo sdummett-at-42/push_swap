@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:53:54 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/31 12:07:08 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/31 15:37:49 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,26 +94,130 @@ unsigned int	get_index_max(t_stacks *stacks)
 
 void	move_min_rra(t_stacks *stacks)
 {
-	(void)stacks;
-	printf("move_min_rra\n");
+	int	min;
+
+	min = get_min_number(stacks);
+	while (stacks->a[stacks->nb_elem_a - 1] != min)
+		reverse_rotate_a(stacks);
+	if (get_index_max(stacks) > stacks->nb_elem_a - 2)
+	{
+		while (1)
+		{
+			swap_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+			rotate_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+		}
+	}
+	else
+	{
+		while (1)
+		{
+			reverse_rotate_a(stacks);
+			swap_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+		}		
+	}
+	print_stacks(stacks);
 }
 
 void	move_min_ra(t_stacks *stacks)
 {
-	(void)stacks;
-	printf("move_min_ra\n");
+	int	min;
+
+	min = get_min_number(stacks);
+	while (stacks->a[stacks->nb_elem_a - 1] != min)
+		rotate_a(stacks);
+	if (get_index_max(stacks) > stacks->nb_elem_a - 2)
+	{
+		while (1)
+		{
+			swap_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+			rotate_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+		}
+	}
+	else
+	{
+		while (1)
+		{
+			reverse_rotate_a(stacks);
+			swap_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+		}		
+	}
+	print_stacks(stacks);
 }
 
 void	move_max_rra(t_stacks *stacks)
 {
-	(void)stacks;
-	printf("move_max_rra\n");
+	int	max;
+
+	max = get_min_number(stacks);
+	while (stacks->a[stacks->nb_elem_a - 1] != max)
+		reverse_rotate_a(stacks);
+	if (get_index_max(stacks) > stacks->nb_elem_a - 2)
+	{
+		while (1)
+		{
+			swap_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+			rotate_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+		}
+	}
+	else
+	{
+		while (1)
+		{
+			reverse_rotate_a(stacks);
+			swap_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+		}		
+	}
+	print_stacks(stacks);
 }
 
 void	move_max_ra(t_stacks *stacks)
 {
-	(void)stacks;
-	printf("move_max_ra\n");
+	int	max;
+
+	max = get_max_number(stacks);
+	while (stacks->a[stacks->nb_elem_a - 1] != max)
+		rotate_a(stacks);
+	if (get_index_max(stacks) > stacks->nb_elem_a - 2)
+	{
+		while (1)
+		{
+			swap_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+			rotate_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+		}
+	}
+	else
+	{
+		while (1)
+		{
+			reverse_rotate_a(stacks);
+			swap_a(stacks);
+			if (is_stick(stacks) == 1)
+				break ;
+		}		
+	}
+	print_stacks(stacks);
 }
 
 void	how_to_move(t_stacks *stacks, t_move *move)
@@ -125,11 +229,11 @@ void	how_to_move(t_stacks *stacks, t_move *move)
 
 	i_min = get_index_min(stacks);
 	i_max = get_index_max(stacks);
-	printf("i_min: %d | i_max: %d\n", i_min, i_max);
+	printf("i_min     : %3d | i_max: %3d\n", i_min, i_max);
 	diff_to_top_min = (stacks->nb_elem_a - 1) - i_min;
 	diff_to_top_max = (stacks->nb_elem_a - 1) - i_max;
-	printf("to_top_min: %d\n", diff_to_top_min);
-	printf("to_top_max: %d\n", diff_to_top_max);
+	printf("to_top_min: %3d\n", diff_to_top_min);
+	printf("to_top_max: %3d\n", diff_to_top_max);
 	move->max_ra = 0;
 	move->max_rra = 0;
 	move->min_ra = 0;
@@ -148,7 +252,7 @@ void	how_to_move(t_stacks *stacks, t_move *move)
 			if (i_min < diff_to_top_max)
 				move->min_rra = 1; // move_min_rra(stacks);
 			else
-				move->max_ra = 1; // (stacks);
+				move->max_ra = 1; // move_max_ra(stacks);
 		}
 	}
 	else
@@ -187,7 +291,6 @@ void	stick_them(t_stacks *stacks)
 
 void	stick_extreme_numbers(t_stacks *stacks)
 {
-	printf("nb_elem_a: %d\n", stacks->nb_elem_a);
 	if (is_stick(stacks) == 0)
 		stick_them(stacks);
 }
