@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:53:54 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/31 16:00:42 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/31 16:52:36 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -329,10 +329,35 @@ int	extreme_are_reversed(t_stacks *stacks)
 	return (0);
 }
 
+void	reverse_them(t_stacks *stacks)
+{
+	unsigned int	i_min;
+	unsigned int	i_max;
+
+	i_min = get_index_min(stacks);
+	i_max = get_index_max(stacks);
+
+	if (i_min == 0 && i_min != stacks->nb_elem_a - 1)
+	{
+		reverse_rotate_a(stacks);
+		swap_a(stacks);
+	}
+	else if (i_min == stacks->nb_elem_a - 1)
+		swap_a(stacks);
+	else
+	{
+		rotate_a(stacks);
+		swap_a(stacks);
+	}
+	print_stacks(stacks);
+}
+
 void	stick_extreme_numbers(t_stacks *stacks)
 {
 	if (is_stick(stacks) == 0)
 		stick_them(stacks);
 	if (extreme_are_reversed(stacks) == 1)
-		printf("Oh shit\n");
+		reverse_them(stacks);
+	if (extreme_are_reversed(stacks) == 1) // <- TEMPORARY
+		printf("reversing_them() not worked well\n"); 
 }
