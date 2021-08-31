@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/31 10:08:16 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/31 11:45:16 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@
 # include <stdio.h> // <- to delete
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct	s_move
+{
+	int	min_rra;
+	int	min_ra;
+	int	max_rra;
+	int	max_ra;
+}	t_move;
+
 
 /*
 ** Structure to get the numbers sorted

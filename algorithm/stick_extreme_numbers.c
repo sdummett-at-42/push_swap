@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:53:54 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/31 10:29:27 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/31 12:07:08 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int	is_stick(t_stacks * stacks)
 	return (0);
 }
 
-
 unsigned int	get_index_min(t_stacks *stacks)
 {
 	unsigned int	i;
@@ -93,14 +92,97 @@ unsigned int	get_index_max(t_stacks *stacks)
 	return (i);
 }
 
-void	stick_them(t_stacks *stacks)
+void	move_min_rra(t_stacks *stacks)
+{
+	(void)stacks;
+	printf("move_min_rra\n");
+}
+
+void	move_min_ra(t_stacks *stacks)
+{
+	(void)stacks;
+	printf("move_min_ra\n");
+}
+
+void	move_max_rra(t_stacks *stacks)
+{
+	(void)stacks;
+	printf("move_max_rra\n");
+}
+
+void	move_max_ra(t_stacks *stacks)
+{
+	(void)stacks;
+	printf("move_max_ra\n");
+}
+
+void	how_to_move(t_stacks *stacks, t_move *move)
 {
 	unsigned int	i_min;
 	unsigned int	i_max;
+	unsigned int	diff_to_top_min;
+	unsigned int	diff_to_top_max;
 
 	i_min = get_index_min(stacks);
 	i_max = get_index_max(stacks);
-	printf("i_min: %d |i_max: %d\n", i_min, i_max);
+	printf("i_min: %d | i_max: %d\n", i_min, i_max);
+	diff_to_top_min = (stacks->nb_elem_a - 1) - i_min;
+	diff_to_top_max = (stacks->nb_elem_a - 1) - i_max;
+	printf("to_top_min: %d\n", diff_to_top_min);
+	printf("to_top_max: %d\n", diff_to_top_max);
+	move->max_ra = 0;
+	move->max_rra = 0;
+	move->min_ra = 0;
+	move->min_rra = 0;
+	if (i_min < diff_to_top_min)
+	{
+		if (i_max < diff_to_top_max)
+		{
+			if (i_min < i_max)
+				 move->min_rra = 1; // move_min_rra(stacks);
+			else
+				move->max_rra = 1; // move_max_rra(stacks);
+		}
+		else
+		{
+			if (i_min < diff_to_top_max)
+				move->min_rra = 1; // move_min_rra(stacks);
+			else
+				move->max_ra = 1; // (stacks);
+		}
+	}
+	else
+	{
+		if (i_max < diff_to_top_max)
+		{
+			if (diff_to_top_min < i_max)
+				move->min_ra = 1; // move_min_ra(stacks);
+			else
+				move->max_rra = 1; // move_max_rra(stacks);
+		}
+		else
+		{
+			if (diff_to_top_min < diff_to_top_max)
+				move->min_ra = 1; // move_min_ra(stacks);
+			else
+				move->max_ra = 1; // move_max_ra(stacks);
+		}
+	}
+}
+
+void	stick_them(t_stacks *stacks)
+{
+	t_move			move;
+
+	how_to_move(stacks, &move);
+	if (move.min_ra == 1)
+		move_min_ra(stacks);
+	else if (move.min_rra == 1)
+		move_min_rra(stacks);
+	else if (move.max_ra == 1)
+		move_max_ra(stacks);
+	else if (move.max_rra == 1)
+		move_max_rra(stacks);
 }
 
 void	stick_extreme_numbers(t_stacks *stacks)
