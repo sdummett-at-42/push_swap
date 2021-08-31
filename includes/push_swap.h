@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/31 09:48:45 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/31 10:08:16 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ void		split_until_median(t_stacks *stacks);
 void		print_sorted(t_sorted *sorted); // <- TEMPORARY
 int			get_min_number(t_stacks *stacks);
 int			get_max_number(t_stacks *stacks);
+void		stick_extreme_numbers(t_stacks *stacks);
 
 #endif

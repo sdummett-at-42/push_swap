@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/31 09:49:19 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/31 10:08:52 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ int main(int ac, char **av)
 	int min = get_min_number(stacks);
 	int max = get_max_number(stacks);
 	printf("min: %d | max: %d\n", min, max);
+	stick_extreme_numbers(stacks);
 	clean_exit(stacks);
 }
