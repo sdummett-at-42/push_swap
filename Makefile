@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/31 10:07:54 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/01 11:49:51 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,13 @@ SRC			= push_swap.c \
 			  algorithm/get_median.c \
 			  algorithm/split_until_median.c \
 			  algorithm/done/get_extreme_numbers.c \
-			  algorithm/stick_extreme_numbers.c
+			  algorithm/stick_extreme_numbers.c \
+			  algorithm/get_index_max.c \
+			  algorithm/get_index_min.c \
+			  algorithm/is_pseudo_sorted.c \
+			  algorithm/how_to_move_pseudo_sorted.c \
+			  algorithm/move_min_to_top_with_ra.c \
+			  algorithm/move_min_to_top_with_rra.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/31 15:04:09 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/01 11:53:00 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,17 @@ int main(int ac, char **av)
 	}
 //	print_stacks(stacks);
 //	ugly_sort(stacks);
+	print_stacks(stacks);
+	t_move_2 move_2;
+	move_2.ra = 0;
+	move_2.rra = 0;
+	how_to_move_pseudo_sorted(stacks, &move_2);
+	if (move_2.ra == 1)
+		move_min_to_top_with_ra(stacks);
+	else if (move_2.rra == 1)
+		move_min_to_top_with_rra(stacks);
+	print_stacks(stacks);
+	return (0);
 
 /*
 ** Implementation of the new algorithm below
@@ -49,9 +60,8 @@ int main(int ac, char **av)
 	// printf("median is %d\n", median);
 	split_until_median(stacks);
 	print_sorted(stacks->sorted);
-	int min = get_min_number(stacks);
-	int max = get_max_number(stacks);
-	printf("min       : %3d | max  : %3d\n", min, max);
+	printf("min       : %3d | max  : %3d\n", get_min_number(stacks), get_max_number(stacks));
 	stick_extreme_numbers(stacks);
+
 	clean_exit(stacks);
 }

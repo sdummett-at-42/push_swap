@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:53:54 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/31 16:52:36 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/01 11:31:33 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,39 +57,6 @@ int	is_stick(t_stacks * stacks)
 		i++;
 	}
 	return (0);
-}
-
-unsigned int	get_index_min(t_stacks *stacks)
-{
-	unsigned int	i;
-	int				min;
-
-
-	min = get_min_number(stacks);
-	i = 0;
-	while (i < stacks->nb_elem_a)
-	{
-		if (stacks->a[i] == min)
-			return (i);
-		i++;
-	}
-	return (i);
-}
-
-unsigned int	get_index_max(t_stacks *stacks)
-{
-	unsigned int	i;
-	int				max;
-
-	max = get_max_number(stacks);
-	i = 0;
-	while (i < stacks->nb_elem_a)
-	{
-		if (stacks->a[i] == max)
-			return (i);
-		i++;
-	}
-	return (i);
 }
 
 void	move_min_rra(t_stacks *stacks)
@@ -303,7 +270,7 @@ int	extreme_are_reversed(t_stacks *stacks)
 		else
 			return (1);
 	}
-	if (i_min == stacks->nb_elem_a - 1 )
+	if (i_min == stacks->nb_elem_a - 1)
 	{
 		if (i_max == i_min - 1)
 			return (1);
@@ -334,9 +301,9 @@ void	reverse_them(t_stacks *stacks)
 	unsigned int	i_min;
 	unsigned int	i_max;
 
+	write(1, "Do reverse_them()\n", 18);
 	i_min = get_index_min(stacks);
 	i_max = get_index_max(stacks);
-
 	if (i_min == 0 && i_min != stacks->nb_elem_a - 1)
 	{
 		reverse_rotate_a(stacks);
@@ -358,6 +325,6 @@ void	stick_extreme_numbers(t_stacks *stacks)
 		stick_them(stacks);
 	if (extreme_are_reversed(stacks) == 1)
 		reverse_them(stacks);
-	if (extreme_are_reversed(stacks) == 1) // <- TEMPORARY
-		printf("reversing_them() not worked well\n"); 
+	if (extreme_are_reversed(stacks) == 1) // <- TEMPORARY IN CASE OF BUGS IN reverse_them()
+		printf("reverse_them() failed.\n"); 
 }
