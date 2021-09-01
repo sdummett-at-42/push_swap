@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/01 14:47:40 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/01 19:22:01 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ SRC			= push_swap.c \
 			  algorithm/how_to_move_pseudo_sorted.c \
 			  algorithm/move_min_to_top_with_ra.c \
 			  algorithm/move_min_to_top_with_rra.c \
-			  algorithm/find_biggest_number.c \
+			  algorithm/find_biggest_number.c  \
+			  algorithm/sort_curr_biggest_number.c \
 			  algorithm/get_number_index.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)

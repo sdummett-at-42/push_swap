@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 14:50:03 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/01 19:28:50 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,11 @@ int main(int ac, char **av)
 	}
 //	print_stacks(stacks);
 //	ugly_sort(stacks);
-	int res = find_biggest_number(stacks, get_max_number(stacks));
-	printf("biggest nb: %d\n", res);
-	int res_2 = get_number_index(stacks, 9);
-	printf("index: %d\n", res_2);
+	// int res = find_biggest_number(stacks, get_max_number(stacks));
+	// printf("biggest nb: %d\n", res);
+	// int res_2 = get_number_index(stacks, 9);
+	// printf("index: %d\n", res_2);
+	sort_curr_biggest_number(stacks, find_biggest_number(stacks, get_max_number(stacks)));
 	return (0);
 
 /*
@@ -68,6 +69,7 @@ int main(int ac, char **av)
 			move_min_to_top_with_rra(stacks);
 		print_stacks(stacks);
 	}
+
 	// else
 	// {
 	// 	sort_stack_a(stacks);

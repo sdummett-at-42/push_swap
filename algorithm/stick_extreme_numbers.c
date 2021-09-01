@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:53:54 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 15:11:24 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/01 19:24:08 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,7 +186,7 @@ void	move_max_ra(t_stacks *stacks)
 	print_stacks(stacks);
 }
 
-void	how_to_move(t_stacks *stacks, t_move *move)
+void	how_to_move_extreme_values(t_stacks *stacks, t_move *move)
 {
 	unsigned int	i_min;
 	unsigned int	i_max;
@@ -244,7 +244,7 @@ void	stick_them(t_stacks *stacks)
 {
 	t_move			move;
 
-	how_to_move(stacks, &move);
+	how_to_move_extreme_values(stacks, &move);
 	if (move.min_ra == 1)
 		move_min_ra(stacks);
 	else if (move.min_rra == 1)
