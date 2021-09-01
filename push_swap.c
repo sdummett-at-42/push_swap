@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 11:53:00 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/01 14:50:03 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,10 @@ int main(int ac, char **av)
 	}
 //	print_stacks(stacks);
 //	ugly_sort(stacks);
-	print_stacks(stacks);
-	t_move_2 move_2;
-	move_2.ra = 0;
-	move_2.rra = 0;
-	how_to_move_pseudo_sorted(stacks, &move_2);
-	if (move_2.ra == 1)
-		move_min_to_top_with_ra(stacks);
-	else if (move_2.rra == 1)
-		move_min_to_top_with_rra(stacks);
-	print_stacks(stacks);
+	int res = find_biggest_number(stacks, get_max_number(stacks));
+	printf("biggest nb: %d\n", res);
+	int res_2 = get_number_index(stacks, 9);
+	printf("index: %d\n", res_2);
 	return (0);
 
 /*
@@ -62,6 +56,21 @@ int main(int ac, char **av)
 	print_sorted(stacks->sorted);
 	printf("min       : %3d | max  : %3d\n", get_min_number(stacks), get_max_number(stacks));
 	stick_extreme_numbers(stacks);
-
+	if (is_pseudo_sorted(stacks) == 1)
+	{
+		t_move_2 move_2;
+		move_2.ra = 0;
+		move_2.rra = 0;
+		how_to_move_pseudo_sorted(stacks, &move_2);
+		if (move_2.ra == 1)
+			move_min_to_top_with_ra(stacks);
+		else if (move_2.rra == 1)
+			move_min_to_top_with_rra(stacks);
+		print_stacks(stacks);
+	}
+	// else
+	// {
+	// 	sort_stack_a(stacks);
+	// }
 	clean_exit(stacks);
 }

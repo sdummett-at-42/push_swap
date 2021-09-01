@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:53:54 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 11:31:33 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/01 15:11:24 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	is_stick(t_stacks * stacks)
 
 	min = get_min_number(stacks);
 	max = get_max_number(stacks);
-
 	i = 0;
 	while (i < stacks->nb_elem_a)
 	{
@@ -196,11 +195,11 @@ void	how_to_move(t_stacks *stacks, t_move *move)
 
 	i_min = get_index_min(stacks);
 	i_max = get_index_max(stacks);
-	printf("i_min     : %3d | i_max: %3d\n", i_min, i_max);
+	// printf("i_min     : %3d | i_max: %3d\n", i_min, i_max);
 	diff_to_top_min = (stacks->nb_elem_a - 1) - i_min;
 	diff_to_top_max = (stacks->nb_elem_a - 1) - i_max;
-	printf("to_top_min: %3d\n", diff_to_top_min);
-	printf("to_top_max: %3d\n", diff_to_top_max);
+	// printf("to_top_min: %3d\n", diff_to_top_min);
+	// printf("to_top_max: %3d\n", diff_to_top_max);
 	move->max_ra = 0;
 	move->max_rra = 0;
 	move->min_ra = 0;

@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack_a.c                                     :+:      :+:    :+:   */
+/*   sort_curr_biggest_number.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/01 12:11:58 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 14:54:23 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/01 14:54:48 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/01 15:06:37 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_stack_a(t_stacks *stacks)
+void	sort_curr_biggest_number(t_stacks *stacks, int curr_biggest_nb)
 {
-	int	curr_biggest_nb = find_biggest_number(stacks, get_max_number(stacks));
-	while (is_sorted(stacks) != 1)
+	unsigned int	i;
+
+	i = 0;
+	while (1)
 	{
-		if (stacks->a[stacks->nb_elem_a - 1] > stacks->a[stacks->a[stacks->nb_elem_a - 2]])
-			swap_a(stacks);
-		else
-			sort_curr_biggest_nb(stacks, curr_biggest_nb);
+		if (i > stacks->nb_elem_a - 1)
+		{
+
+		}
+		else if 
 	}
 }

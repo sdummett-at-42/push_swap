@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack_a.c                                     :+:      :+:    :+:   */
+/*   find_biggest_number.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/01 12:11:58 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 14:54:23 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/01 14:32:13 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/01 14:41:05 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_stack_a(t_stacks *stacks)
+int	find_biggest_number(t_stacks *stacks, int max_nb)
 {
-	int	curr_biggest_nb = find_biggest_number(stacks, get_max_number(stacks));
-	while (is_sorted(stacks) != 1)
+	unsigned int	i;
+	int				biggest_number;
+
+	i = 1;
+	biggest_number = stacks->a[0];
+	while (i < stacks->nb_elem_a)
 	{
-		if (stacks->a[stacks->nb_elem_a - 1] > stacks->a[stacks->a[stacks->nb_elem_a - 2]])
-			swap_a(stacks);
-		else
-			sort_curr_biggest_nb(stacks, curr_biggest_nb);
+		if ((biggest_number < stacks->a[i] && stacks->a[i] < max_nb) \
+		|| (biggest_number > max_nb && stacks->a[i] < max_nb))
+			biggest_number = stacks->a[i];
+		i++;
 	}
+	return (biggest_number);
 }

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 20:57:34 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/30 19:20:08 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/01 12:11:27 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ int	init_stacks(t_stacks *stacks, int ac, char **av)
 		ac--;
 		i++;
 	}
-	stacks->sorted = sort_stack_a(stacks);
+	stacks->sorted = sort_stack_a_into_another_tab(stacks);
 	return (0);
 }

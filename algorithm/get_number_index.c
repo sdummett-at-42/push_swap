@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack_a.c                                     :+:      :+:    :+:   */
+/*   get_number_index.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/01 12:11:58 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 14:54:23 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/01 14:45:21 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/01 14:50:41 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_stack_a(t_stacks *stacks)
+unsigned int	get_number_index(t_stacks *stacks, int number)
 {
-	int	curr_biggest_nb = find_biggest_number(stacks, get_max_number(stacks));
-	while (is_sorted(stacks) != 1)
+	unsigned int	i;
+
+	i = 0;
+	while (i < stacks->nb_elem_a)
 	{
-		if (stacks->a[stacks->nb_elem_a - 1] > stacks->a[stacks->a[stacks->nb_elem_a - 2]])
-			swap_a(stacks);
-		else
-			sort_curr_biggest_nb(stacks, curr_biggest_nb);
+		if (stacks->a[i] == number)
+			return (i);
+		i++;
 	}
+	return (i);
 }

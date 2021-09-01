@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/01 11:49:51 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/01 14:47:40 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ SRC			= push_swap.c \
 			  stacks/print_stacks.c \
 			  stacks/stacks_utils.c \
 			  algorithm/done/ugly_algorithm.c \
-			  algorithm/sort_stack_a.c \
+			  algorithm/sort_stack_a_into_another_tab.c \
 			  algorithm/get_median.c \
 			  algorithm/split_until_median.c \
 			  algorithm/done/get_extreme_numbers.c \
@@ -49,7 +49,9 @@ SRC			= push_swap.c \
 			  algorithm/is_pseudo_sorted.c \
 			  algorithm/how_to_move_pseudo_sorted.c \
 			  algorithm/move_min_to_top_with_ra.c \
-			  algorithm/move_min_to_top_with_rra.c
+			  algorithm/move_min_to_top_with_rra.c \
+			  algorithm/find_biggest_number.c \
+			  algorithm/get_number_index.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)
