@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 09:53:54 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 19:24:08 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/02 12:19:27 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ void	move_min_rra(t_stacks *stacks)
 				break ;
 		}		
 	}
-	print_stacks(stacks);
 }
 
 void	move_min_ra(t_stacks *stacks)
@@ -119,7 +118,6 @@ void	move_min_ra(t_stacks *stacks)
 				break ;
 		}		
 	}
-	print_stacks(stacks);
 }
 
 void	move_max_rra(t_stacks *stacks)
@@ -151,7 +149,6 @@ void	move_max_rra(t_stacks *stacks)
 				break ;
 		}		
 	}
-	print_stacks(stacks);
 }
 
 void	move_max_ra(t_stacks *stacks)
@@ -183,7 +180,6 @@ void	move_max_ra(t_stacks *stacks)
 				break ;
 		}		
 	}
-	print_stacks(stacks);
 }
 
 void	how_to_move_extreme_values(t_stacks *stacks, t_move *move)
@@ -315,7 +311,6 @@ void	reverse_them(t_stacks *stacks)
 		rotate_a(stacks);
 		swap_a(stacks);
 	}
-	print_stacks(stacks);
 }
 
 void	stick_extreme_numbers(t_stacks *stacks)

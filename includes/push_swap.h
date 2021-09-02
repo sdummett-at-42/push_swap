@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 20:18:35 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/02 12:08:32 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void			clean_exit(t_stacks *stacks);
 /*
 ** Algorithm
 */
-void			ugly_sort(t_stacks *stacks);
+void			ugly_sort(t_stacks *stacks); // <- The ugliest sort ever
 
 t_sorted		*sort_stack_a_into_another_tab(t_stacks *stacks);
 int				get_median(t_sorted *sorted);
@@ -112,6 +112,7 @@ void			move_min_to_top_with_ra(t_stacks *stacks);
 void			move_min_to_top_with_rra(t_stacks *stacks);
 int				find_biggest_number(t_stacks *stacks, int max_nb);
 unsigned int	get_number_index(t_stacks *stacks, int number);
-void			sort_curr_biggest_number(t_stacks *stacks, int curr_big_nb);
+void			sort_curr_biggest_number(t_stacks *stacks, int curr_big_nb, int next_big_nb);
+void			sort_stack_a(t_stacks *stacks);
 
 #endif

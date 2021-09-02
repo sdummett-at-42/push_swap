@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 19:28:50 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/02 12:21:12 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,12 @@ int main(int ac, char **av)
 	// printf("biggest nb: %d\n", res);
 	// int res_2 = get_number_index(stacks, 9);
 	// printf("index: %d\n", res_2);
-	sort_curr_biggest_number(stacks, find_biggest_number(stacks, get_max_number(stacks)));
+	print_stacks(stacks);
+	sort_stack_a(stacks);
+	print_stacks(stacks);
 	return (0);
+	// sort_curr_biggest_number(stacks, find_biggest_number(stacks, get_max_number(stacks)));
+	// return (0);
 
 /*
 ** Implementation of the new algorithm below
