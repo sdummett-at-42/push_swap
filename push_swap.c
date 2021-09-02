@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/02 13:19:54 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/02 20:14:12 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ int main(int ac, char **av)
 ** Implementation of the new algorithm below
 */
 	split_until_median(stacks);
+	move_stack_a_int_b(stacks);
+	count_moves(stacks);
+	print_moves(stacks);
+	print_stacks(stacks);
+	/* Old algo */
+/*
 	print_sorted(stacks->sorted);
 	stick_extreme_numbers(stacks);
 	if (is_pseudo_sorted(stacks) == 1)
@@ -62,5 +68,6 @@ int main(int ac, char **av)
 		sort_stack_a(stacks);
 	}
 	//print_stacks(stacks);
+*/
 	clean_exit(stacks);
 }
