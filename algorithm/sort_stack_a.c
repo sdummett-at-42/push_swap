@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 12:11:58 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/02 12:22:11 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/02 13:18:47 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	sort_stack_a(t_stacks *stacks)
 	int	previous_big;
 
 	previous_big = get_max_number(stacks);
-	curr_biggest_nb = find_biggest_number(stacks, get_max_number(stacks));
-	while (is_sorted(stacks) != 1)// && wait != 15)
+	curr_biggest_nb = find_biggest_number(stacks, previous_big);
+	while (is_sorted(stacks) != 1)
 	{
 		// Not sure about this first condition
 		// if (stacks->a[stacks->nb_elem_a - 1] > stacks->a[stacks->a[stacks->nb_elem_a - 2]])

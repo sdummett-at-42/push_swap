@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 14:54:48 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/02 12:19:49 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/02 13:18:23 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,18 +110,13 @@ void	sort_curr_biggest_number(t_stacks *stacks, int curr_big_nb, int next_big_nb
 	move.rra = 0;
 	how_to_move(stacks, &move, curr_big_nb);
 	i = 0;
-	// while (1) // <- is_pseudo_sorted() != 1;
-	// {
-		// printf("hello\n");
-		if (is_well_placed(stacks, curr_big_nb, next_big_nb) == 0)
-		{
-			if (move.ra)
-				move_ra(stacks, curr_big_nb, &move);
-			else if (move.rra == 1)
-				move_rra(stacks, curr_big_nb, &move);
-			how_to_stick_values(stacks, &move, curr_big_nb, next_big_nb);
-			stick_values(stacks, &move, curr_big_nb, next_big_nb);
-			// break ;
-		}
-	// }
+	if (is_well_placed(stacks, curr_big_nb, next_big_nb) == 0)
+	{
+		if (move.ra)
+			move_ra(stacks, curr_big_nb, &move);
+		else if (move.rra == 1)
+			move_rra(stacks, curr_big_nb, &move);
+		how_to_stick_values(stacks, &move, curr_big_nb, next_big_nb);
+		stick_values(stacks, &move, curr_big_nb, next_big_nb);
+	}
 }
