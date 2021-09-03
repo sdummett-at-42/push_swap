@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 12:10:52 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 14:34:34 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,14 @@ typedef struct s_sorted
 /*
 ** Structure for holding the two stacks
 */
+
+/*
+**
+** => long int **best_moves
+**	   INDEX	                [0]                           [1]
+** | index_elem_b | index of the next elem (elem_a) | total numbers of ops |
+**
+**/
 typedef struct s_stacks
 {
 	int	*a;
@@ -126,5 +134,7 @@ void			count_moves(t_stacks *stacks);
 void			print_moves(t_stacks *stacks);
 unsigned int	get_next_value_index(t_stacks *stacks, int elem_to_sort);
 void			get_best_moves(t_stacks *stacks);
+void			print_best_moves(t_stacks *stacks);
+unsigned int	get_index_best_moves(t_stacks *stacks);
 
 #endif

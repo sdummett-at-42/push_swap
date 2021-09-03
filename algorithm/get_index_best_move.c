@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_moves.c                                      :+:      :+:    :+:   */
+/*   get_index_best_move.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/02 19:54:29 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 14:10:15 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/03 14:27:09 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/03 14:41:24 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	count_moves(t_stacks *stacks)
+unsigned int	get_index_best_moves(t_stacks *stacks)
 {
 	unsigned int	i;
+	unsigned int	index_best_move;
 
-	i = 0;
-	while (i < stacks->nb_elem_a)
-	{
-		if (i >= stacks->nb_elem_a / 2)
-			stacks->moves_a[i] = stacks->nb_elem_a - i - 1;
-		else
-			stacks->moves_a[i] = i + 1;
-		i++;
-	}
-	i = 0;
+	i = 1;
+	index_best_move = 0;
 	while (i < stacks->nb_elem_b)
 	{
-		if (i >= stacks->nb_elem_b / 2)
-			stacks->moves_b[i] = stacks->nb_elem_b - i - 1;
-		else
-			stacks->moves_b[i] = i + 1;
+		if (stacks->best_moves[1][index_best_move] > stacks->best_moves[1][i]) 
+			index_best_move = i;
 		i++;
 	}
+	return (index_best_move);
 }

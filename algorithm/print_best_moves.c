@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_moves.c                                      :+:      :+:    :+:   */
+/*   print_best_moves.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/02 19:54:29 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 14:10:15 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/03 12:59:50 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/03 14:47:59 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	count_moves(t_stacks *stacks)
+void	print_best_moves(t_stacks *stacks)
 {
 	unsigned int	i;
-
+	unsigned int	total;
 	i = 0;
-	while (i < stacks->nb_elem_a)
+	if (stacks->nb_elem_a > stacks->nb_elem_b)
+		total = stacks->nb_elem_a;
+	else
+		total = stacks->nb_elem_b;
+	while (total > 0)
 	{
-		if (i >= stacks->nb_elem_a / 2)
-			stacks->moves_a[i] = stacks->nb_elem_a - i - 1;
-		else
-			stacks->moves_a[i] = i + 1;
-		i++;
-	}
-	i = 0;
-	while (i < stacks->nb_elem_b)
-	{
-		if (i >= stacks->nb_elem_b / 2)
-			stacks->moves_b[i] = stacks->nb_elem_b - i - 1;
-		else
-			stacks->moves_b[i] = i + 1;
-		i++;
+		printf("total: %3d | %4ld | %4ld |\n", total - 1, stacks->best_moves[0][total - 1], stacks->best_moves[1][total - 1]);
+		total--;
 	}
 }

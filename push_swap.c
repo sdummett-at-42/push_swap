@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 12:39:43 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 14:36:20 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ int main(int ac, char **av)
 	count_moves(stacks);
 	// print_moves(stacks);
 	print_stacks(stacks);
-	push_a(stacks);
-	int res = get_next_value_index(stacks, stacks->b[stacks->nb_elem_b - 1]);
-	printf("index: %d\n", res);
+	get_best_moves(stacks);
+	print_best_moves(stacks);
+	printf("index_best_moves: %d\n", get_index_best_moves(stacks));
 	print_stacks(stacks);
 	/* Old algo */
 /*

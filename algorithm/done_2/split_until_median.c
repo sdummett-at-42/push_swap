@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:41:31 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/30 20:16:52 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 14:19:17 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	get_last_number_at_median(t_stacks *stacks)
 	unsigned int	i;
 
 	median = get_median(stacks->sorted);
-	printf("median: %d\n", median);
 	i = 1;
 	nb_at_median = median;
 	while (i < stacks->nb_elem_a)
@@ -55,7 +54,6 @@ void	split_until_median(t_stacks *stacks)
 	int	nb_at_median;
 
 	nb_at_median = get_last_number_at_median(stacks);
-	printf("nb_at_median: %d\n", nb_at_median);
 	while (is_splitted(stacks, nb_at_median) != 1)
 	{
 		if (stacks->a[stacks->nb_elem_a - 1] <= nb_at_median)
