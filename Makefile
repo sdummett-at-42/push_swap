@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/03 14:36:11 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/03 15:24:36 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,8 @@ SRC			= push_swap.c \
 			  algorithm/get_next_value_index.c\
 			  algorithm/get_best_moves.c \
 			  algorithm/print_best_moves.c \
-			  algorithm/get_index_best_move.c
+			  algorithm/get_index_best_move.c \
+			  algorithm/move_elem.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)

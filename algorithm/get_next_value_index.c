@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:29:58 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 14:11:19 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 15:40:13 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,11 @@ unsigned int	get_next_value_index(t_stacks *stacks, int elem_to_sort)
 		if (i == stacks->nb_elem_a - 1)
 		{
 			if (stacks->a[i] > elem_to_sort && stacks->a[0] < elem_to_sort)
-			{
-				printf("get CHECK 1 => i: %d\n", i);
 				return (i);
-			}
 		}
 		else if (stacks->a[i] > elem_to_sort && stacks->a[i + 1] < elem_to_sort)
-		{
-			printf("get CHECK 2 => i: %d\n", i);
 			return (i);
-		}
 		i++;
 	}
-	printf("get CHECK 3 => i: %d\n", i);
 	return (i);
 }

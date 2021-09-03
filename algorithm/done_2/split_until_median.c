@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:41:31 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 14:19:17 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 15:48:42 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,4 @@ void	split_until_median(t_stacks *stacks)
 		else
 			rotate_a(stacks);
 	}
-	print_stacks(stacks);
 }
