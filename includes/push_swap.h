@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/02 20:10:25 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 12:10:52 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,9 @@ typedef struct s_stacks
 	unsigned int	nb_elem_total;
 	unsigned int	nb_elem_a;
 	unsigned int	nb_elem_b;
-	int *moves_a;
-	int	*moves_b;
+	long int		*moves_a;
+	long int		*moves_b;
+	long int		**best_moves;
 	t_sorted		*sorted;
 }	t_stacks;
 
@@ -123,5 +124,7 @@ void			sort_stack_a(t_stacks *stacks);
 void			move_stack_a_int_b(t_stacks *stacks);
 void			count_moves(t_stacks *stacks);
 void			print_moves(t_stacks *stacks);
+unsigned int	get_next_value_index(t_stacks *stacks, int elem_to_sort);
+void			get_best_moves(t_stacks *stacks);
 
 #endif

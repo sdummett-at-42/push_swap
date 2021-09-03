@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 20:06:18 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/02 20:18:50 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 12:02:01 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	stack_a_gt_b(t_stacks *stacks)
 		if (index_a > 0)
 		{
 			printf("index-- : %d | ", index_a - 1);
-			printf("%d", stacks->moves_a[index_a - 1]);
+			printf("%ld", stacks->moves_a[index_a - 1]);
 			index_a--;
 		}
 		else
@@ -34,7 +34,7 @@ static void	stack_a_gt_b(t_stacks *stacks)
 		printf(" ");
 		if (index_b > 0 && index_b == index_a + 1)
 		{
-			printf("%d\n", stacks->moves_b[index_b - 1]);
+			printf("%ld\n", stacks->moves_b[index_b - 1]);
 			index_b--;
 		}
 		else
@@ -59,7 +59,7 @@ static void	stack_b_gt_a(t_stacks *stacks)
 		if (index_a > 0 && index_a == index_b)
 		{
 			printf("index-- : %d | ", index_a - 1);
-			printf("%d", stacks->moves_a[index_a - 1]);
+			printf("%ld", stacks->moves_a[index_a - 1]);
 			index_a--;
 		}
 		else
@@ -70,7 +70,7 @@ static void	stack_b_gt_a(t_stacks *stacks)
 		printf(" ");
 		if (index_b > 0)
 		{
-			printf("%d\n", stacks->moves_b[index_b - 1]);
+			printf("%ld\n", stacks->moves_b[index_b - 1]);
 			index_b--;
 		}
 		else

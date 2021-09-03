@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 20:57:34 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/02 20:00:28 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 12:25:37 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ t_stacks	*create_stacks(int ac)
 	stacks->b = malloc(sizeof(int) * stacks->nb_elem_total);
 	stacks->moves_a = malloc(sizeof(int) * stacks->nb_elem_total);
 	stacks->moves_b = malloc(sizeof(int) * stacks->nb_elem_total);
+	stacks->best_moves = malloc(sizeof(long int *) * 2);
+	stacks->best_moves[0] = malloc(sizeof(long int) * stacks->nb_elem_total);
+	stacks->best_moves[1] = malloc(sizeof(long int) * stacks->nb_elem_total);
 	stacks->sorted = NULL;
 	return (stacks);
 }

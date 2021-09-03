@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/02 20:11:08 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/03 12:31:25 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,10 @@ SRC			= push_swap.c \
 			  algorithm/done_2/sort_stack_a.c \
 			  algorithm/move_stack_a_into_b.c \
 			  algorithm/count_moves.c \
-			  algorithm/print_moves.c
+			  algorithm/print_moves.c \
+			  algorithm/get_next_value_index.c 
+			  #\
+			  algorithm/get_best_moves.c
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)
