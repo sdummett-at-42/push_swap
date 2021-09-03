@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:52:26 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 18:57:30 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,17 @@ int main(int ac, char **av)
 */
 	split_until_median(stacks);
 	move_stack_a_int_b(stacks);
-	count_moves(stacks);
+	
 	// print_moves(stacks);
 	// print_stacks(stacks);
+	printf("FRESH STACK\n");
+	print_stacks(stacks);
+
 	while (1)
 	{
+		printf("<======================================>\n");
+		count_moves(stacks);
+		//./exit (8);
 		get_best_moves(stacks);
 		// print_best_moves(stacks);
 		move_elem(stacks);
