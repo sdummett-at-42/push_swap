@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 17:08:00 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/30 19:12:09 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:30:25 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	get_median(t_sorted *sorted)
 	if (index_median % 2 == 0)
 		median = sorted->list[index_median - 1];
 	else
-		median = (sorted->list[index_median - 1] + sorted->list[index_median]) / 2;
+		median = (sorted->list[index_median - 1] + \
+		sorted->list[index_median]) / 2;
 	return (median);
 }

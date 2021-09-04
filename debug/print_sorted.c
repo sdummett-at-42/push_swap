@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_index_best_move.c                              :+:      :+:    :+:   */
+/*   print_sorted.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 14:27:09 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 16:50:33 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/04 16:44:55 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/04 16:45:12 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long int	get_index_best_moves(t_stacks *stacks)
+/*
+** Debug function
+*/
+void	print_sorted(t_sorted *sorted)
 {
 	unsigned int	i;
-	long int		index_best_move;
-
-	i = 1;
-	index_best_move = 0;
-	while (i < stacks->nb_elem_b)
+	i = 0;
+	while (i < sorted->total)
 	{
-		if (stacks->best_moves[index_best_move][1] > stacks->best_moves[i][1])
-			index_best_move = i;
+		printf("[%d]", sorted->list[i]);
 		i++;
 	}
-	return (index_best_move);
+	printf("\n");
 }

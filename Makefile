@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/04 14:26:21 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/04 17:02:55 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,10 +33,9 @@ SRC			= push_swap.c \
 			  instructions/reverse_rotate_a_b.c \
 			  utils/is_number.c \
 			  utils/has_duplicates.c \
-			  utils/ft_atoi.c \
+			  utils/ft_atoi_on_steroid.c \
 			  utils/is_sorted.c \
 			  utils/clean_exit.c \
-			  stacks/print_stacks.c \
 			  stacks/stacks_utils.c \
 			  algorithm/sort_stack_a_into_another_tab.c \
 			  algorithm/get_median.c \
@@ -50,13 +49,16 @@ SRC			= push_swap.c \
 			  algorithm/move_min_to_top_with_rra.c \
 			  algorithm/move_stack_a_into_b.c \
 			  algorithm/count_moves.c \
-			  algorithm/print_moves.c \
 			  algorithm/get_next_value_index.c\
 			  algorithm/get_best_moves.c \
-			  algorithm/print_best_moves.c \
 			  algorithm/get_index_best_move.c \
-			  algorithm/move_elem.c
-
+			  algorithm/move_elem.c \
+			  algorithm/optimized_sort.c \
+			  debug/print_sorted.c \
+			  debug/print_moves.c \
+			  debug/print_best_moves.c \
+			  debug/print_stacks.c
+			  
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)

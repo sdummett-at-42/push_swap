@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:29:58 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 11:44:09 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:47:16 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ unsigned int	get_next_value_index(t_stacks *stacks, int elem_to_sort)
 {
 	unsigned int	i;
 
-	if (elem_to_sort > get_max_number(stacks) || elem_to_sort < get_min_number(stacks))
+	if (elem_to_sort > get_max_number(stacks) || \
+	elem_to_sort < get_min_number(stacks))
 		return (get_index_min(stacks));
 	i = 0;
 	while (i < stacks->nb_elem_a)

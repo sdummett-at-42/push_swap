@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack_a.c                                     :+:      :+:    :+:   */
+/*   sort_stack_a_into_another_tab.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:52:14 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 12:04:38 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:46:29 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-** Debug function
-*/
-void	print_sorted(t_sorted *sorted)
-{
-	unsigned int	i;
-	i = 0;
-	while (i < sorted->total)
-	{
-		printf("[%d]", sorted->list[i]);
-		i++;
-	}
-	printf("\n");
-}
-
-/*
 ** Init t_sorted structure
 */
-
 t_sorted	*init_med(void)
 {
 	t_sorted	*new;
@@ -46,7 +30,6 @@ t_sorted	*init_med(void)
 /*
 ** Copy stack a into med.list
 */
-
 void	copy_stack_a(t_stacks *stacks, t_sorted *sorted)
 {
 	unsigned int	i;
@@ -64,7 +47,6 @@ void	copy_stack_a(t_stacks *stacks, t_sorted *sorted)
 /*
 ** Sort the list of numbers
 */
-
 void	sort_list(t_sorted *sorted)
 {
 	unsigned int	i;

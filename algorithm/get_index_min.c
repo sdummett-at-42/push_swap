@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 10:17:24 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/01 10:17:49 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:47:01 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ unsigned int	get_index_min(t_stacks *stacks)
 {
 	unsigned int	i;
 	int				min;
-
 
 	min = get_min_number(stacks);
 	i = 0;

@@ -6,12 +6,11 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:41:31 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:48:42 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:50:15 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 /*
 ** Useless to enter here if stack a have only 2 numbers
@@ -35,7 +34,7 @@ int	get_last_number_at_median(t_stacks *stacks)
 	return (nb_at_median);
 }
 
-int		is_splitted(t_stacks *stacks, int nb_at_median)
+int	is_splitted(t_stacks *stacks, int nb_at_median)
 {
 	unsigned int	i;
 

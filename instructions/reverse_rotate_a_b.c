@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 19:18:02 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 20:31:20 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:26:29 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	rrr_reverse_rotate_a(t_stacks *stacks)
 	tmp = stacks->a[i];
 	while (i < stacks->nb_elem_a - 1)
 	{
-		stacks->a[i] = stacks->a[i +1];
+		stacks->a[i] = stacks->a[i + 1];
 		i++;
 	}
 	stacks->a[i] = tmp;
@@ -40,12 +40,11 @@ void	rrr_reverse_rotate_b(t_stacks *stacks)
 	tmp = stacks->b[i];
 	while (i < stacks->nb_elem_b - 1)
 	{
-		stacks->b[i] = stacks->b[i +1];
+		stacks->b[i] = stacks->b[i + 1];
 		i++;
 	}
 	stacks->b[i] = tmp;
 }
-
 
 void	reverse_rotate_a_b(t_stacks *stacks)
 {

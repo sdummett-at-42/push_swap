@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 20:57:34 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 12:56:36 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 16:24:59 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 t_stacks	*create_stacks(int ac)
 {
-	t_stacks	*stacks;
+	unsigned int	i;
+	t_stacks		*stacks;
 
 	stacks = malloc(sizeof(t_stacks));
 	stacks->nb_elem_total = ac - 1;
@@ -25,7 +26,7 @@ t_stacks	*create_stacks(int ac)
 	stacks->moves_a = malloc(sizeof(long int) * stacks->nb_elem_total);
 	stacks->moves_b = malloc(sizeof(long int) * stacks->nb_elem_total);
 	stacks->best_moves = malloc(sizeof(long int *) * stacks->nb_elem_total);
-	unsigned int i = 0;
+	i = 0;
 	while (i < stacks->nb_elem_total)
 	{
 		stacks->best_moves[i] = malloc(sizeof(long int) * 2);
@@ -46,7 +47,7 @@ int	init_stacks(t_stacks *stacks, int ac, char **av)
 	{
 		if (is_number(av[ac - 1]) == 1)
 			return (1);
-		stacks->a[i] = ft_atoi(av[ac - 1], &overflow);
+		stacks->a[i] = ft_atoi_on_steroid(av[ac - 1], &overflow);
 		if (overflow == 1)
 			return (-1);
 		ac--;
