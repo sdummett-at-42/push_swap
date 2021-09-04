@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 12:55:16 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 13:54:05 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,28 +34,14 @@ int main(int ac, char **av)
 		clean_exit(stacks);
 	}
 	if (is_sorted(stacks))
-	{
-		print_stacks(stacks);
-		//printf("Stack A is already sorted\n"); // <- tmp
 		clean_exit(stacks);
-	}
-	
-/*
-** Implementation of the new algorithm below
-*/
 	split_until_median(stacks);
 	move_stack_a_int_b(stacks);
-	
-	// print_moves(stacks);
-	// print_stacks(stacks);
-	// printf("FRESH STACK\n");
-	// print_stacks(stacks);
 
 	while (1)
 	{
 		count_moves(stacks);
 		get_best_moves(stacks);
-	//	print_best_moves(stacks);
 		move_elem(stacks);
 		if (stacks->nb_elem_b == 0)
 		{
@@ -70,32 +56,5 @@ int main(int ac, char **av)
 			break ;
 		}
 	}
-	// if (is_sorted(stacks))
-	// 	printf("Congrats\n");
-	// print_stacks(stacks);
-
-
-	/* Old algo */
-/*
-	print_sorted(stacks->sorted);
-	stick_extreme_numbers(stacks);
-	if (is_pseudo_sorted(stacks) == 1)
-	{
-		t_move_2 move_2;
-		move_2.ra = 0;
-		move_2.rra = 0;
-		how_to_move_pseudo_sorted(stacks, &move_2);
-		if (move_2.ra == 1)
-			move_min_to_top_with_ra(stacks);
-		else if (move_2.rra == 1)
-			move_min_to_top_with_rra(stacks);
-		print_stacks(stacks);
-	}
-	else
-	{
-		sort_stack_a(stacks);
-	}
-	//print_stacks(stacks);
-*/
 	clean_exit(stacks);
 }

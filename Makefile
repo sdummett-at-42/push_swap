@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/03 19:41:52 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/04 14:26:21 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,22 +38,16 @@ SRC			= push_swap.c \
 			  utils/clean_exit.c \
 			  stacks/print_stacks.c \
 			  stacks/stacks_utils.c \
-			  algorithm/done/ugly_algorithm.c \
-			  algorithm/done_2/sort_stack_a_into_another_tab.c \
-			  algorithm/done_2/get_median.c \
-			  algorithm/done_2/split_until_median.c \
-			  algorithm/done_2/get_extreme_numbers.c \
-			  algorithm/done_2/stick_extreme_numbers.c \
-			  algorithm/done_2/get_index_max.c \
-			  algorithm/done_2/get_index_min.c \
-			  algorithm/done_2/is_pseudo_sorted.c \
-			  algorithm/done_2/how_to_move_pseudo_sorted.c \
-			  algorithm/done_2/move_min_to_top_with_ra.c \
-			  algorithm/done_2/move_min_to_top_with_rra.c \
-			  algorithm/done_2/find_biggest_number.c  \
-			  algorithm/done_2/sort_curr_biggest_number.c \
-			  algorithm/done_2/get_number_index.c \
-			  algorithm/done_2/sort_stack_a.c \
+			  algorithm/sort_stack_a_into_another_tab.c \
+			  algorithm/get_median.c \
+			  algorithm/split_until_median.c \
+			  algorithm/get_extreme_numbers.c \
+			  algorithm/get_index_max.c \
+			  algorithm/get_index_min.c \
+			  algorithm/is_pseudo_sorted.c \
+			  algorithm/how_to_move_pseudo_sorted.c \
+			  algorithm/move_min_to_top_with_ra.c \
+			  algorithm/move_min_to_top_with_rra.c \
 			  algorithm/move_stack_a_into_b.c \
 			  algorithm/count_moves.c \
 			  algorithm/print_moves.c \
@@ -62,6 +56,7 @@ SRC			= push_swap.c \
 			  algorithm/print_best_moves.c \
 			  algorithm/get_index_best_move.c \
 			  algorithm/move_elem.c
+
 INC			= -Iincludes
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)

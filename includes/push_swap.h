@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 21:17:51 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 14:27:20 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,27 +106,19 @@ void			clean_exit(t_stacks *stacks);
 /*
 ** Algorithm
 */
-/* 1st algo */
-void			ugly_sort(t_stacks *stacks); // <- The ugliest sort ever
 
 /* 2nd algo (Some functions will be useful in the new algo) */
 t_sorted		*sort_stack_a_into_another_tab(t_stacks *stacks);
 int				get_median(t_sorted *sorted);
 void			split_until_median(t_stacks *stacks);
-void			print_sorted(t_sorted *sorted); // <- TEMPORARY
 int				get_min_number(t_stacks *stacks);
 int				get_max_number(t_stacks *stacks);
-void			stick_extreme_numbers(t_stacks *stacks);
 unsigned int	get_index_min(t_stacks *stacks);
 unsigned int	get_index_max(t_stacks *stacks);
 int				is_pseudo_sorted(t_stacks *stacks);
-void			how_to_move_pseudo_sorted(t_stacks *stacks, t_move_2 *move_2);
 void			move_min_to_top_with_ra(t_stacks *stacks);
 void			move_min_to_top_with_rra(t_stacks *stacks);
-int				find_biggest_number(t_stacks *stacks, int max_nb);
-unsigned int	get_number_index(t_stacks *stacks, int number);
-void			sort_curr_biggest_number(t_stacks *stacks, int curr_big_nb, int next_big_nb);
-void			sort_stack_a(t_stacks *stacks);
+void			how_to_move_pseudo_sorted(t_stacks *stacks, t_move_2 *move_2);
 
 /* New algo */
 void			move_stack_a_int_b(t_stacks *stacks);
@@ -135,7 +127,7 @@ void			print_moves(t_stacks *stacks);
 unsigned int	get_next_value_index(t_stacks *stacks, int elem_to_sort);
 void			get_best_moves(t_stacks *stacks);
 void			print_best_moves(t_stacks *stacks);
-long int	get_index_best_moves(t_stacks *stacks);
+long int		get_index_best_moves(t_stacks *stacks);
 void			move_elem(t_stacks *stacks);
 
 #endif
