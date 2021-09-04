@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:24:50 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 21:17:51 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,7 @@ void			print_moves(t_stacks *stacks);
 unsigned int	get_next_value_index(t_stacks *stacks, int elem_to_sort);
 void			get_best_moves(t_stacks *stacks);
 void			print_best_moves(t_stacks *stacks);
-unsigned int	get_index_best_moves(t_stacks *stacks);
+long int	get_index_best_moves(t_stacks *stacks);
 void			move_elem(t_stacks *stacks);
 
 #endif

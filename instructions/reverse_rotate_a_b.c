@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 19:18:02 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:25:25 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/03 20:31:20 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	rrr_reverse_rotate_a(t_stacks *stacks)
 		i++;
 	}
 	stacks->a[i] = tmp;
-	write(1, "rra\n", 4);
 }
 
 void	rrr_reverse_rotate_b(t_stacks *stacks)
@@ -45,7 +44,6 @@ void	rrr_reverse_rotate_b(t_stacks *stacks)
 		i++;
 	}
 	stacks->b[i] = tmp;
-	write(1, "rrb\n", 4);
 }
 
 

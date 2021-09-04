@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 18:57:30 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 12:55:16 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,23 +48,17 @@ int main(int ac, char **av)
 	
 	// print_moves(stacks);
 	// print_stacks(stacks);
-	printf("FRESH STACK\n");
-	print_stacks(stacks);
+	// printf("FRESH STACK\n");
+	// print_stacks(stacks);
 
 	while (1)
 	{
-		printf("<======================================>\n");
 		count_moves(stacks);
-		//./exit (8);
 		get_best_moves(stacks);
-		// print_best_moves(stacks);
+	//	print_best_moves(stacks);
 		move_elem(stacks);
-		printf("AFTER MOVING AN ELEM\n");
-		print_stacks(stacks);
 		if (stacks->nb_elem_b == 0)
 		{
-			printf("BEFORE FINAL SORT\n");
-			print_stacks(stacks);
 			t_move_2 move_2;
 			move_2.ra = 0;
 			move_2.rra = 0;
@@ -73,13 +67,14 @@ int main(int ac, char **av)
 				move_min_to_top_with_ra(stacks);
 			else if (move_2.rra == 1)
 				move_min_to_top_with_rra(stacks);
-			printf("AFTER FINAL SORT\n");
 			break ;
 		}
 	}
-	if (is_sorted(stacks))
-		printf("Congrats\n");
-	print_stacks(stacks);
+	// if (is_sorted(stacks))
+	// 	printf("Congrats\n");
+	// print_stacks(stacks);
+
+
 	/* Old algo */
 /*
 	print_sorted(stacks->sorted);

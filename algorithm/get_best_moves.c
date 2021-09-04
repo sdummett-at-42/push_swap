@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:05:20 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 19:12:23 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 12:56:46 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,35 +15,33 @@
 void	get_best_moves(t_stacks *stacks)
 {
 	unsigned int	i;
-	unsigned int	next_elem_index;
-	unsigned int	current_index;
+	unsigned int	i_next_elem;
 
 	i = 0;
-	while (i < stacks->nb_elem_b )//<= stacks->nb_elem_b / 2)
-	{
-		current_index = stacks->nb_elem_b - i - 1;
-		next_elem_index = get_next_value_index(stacks, stacks->b[current_index]);
-		stacks->best_moves[0][i] = next_elem_index;
-		if (stacks->moves_a[next_elem_index] < 0 && stacks->moves_b[current_index] < 0)
+	while (i < stacks->nb_elem_b )
+	{ 
+		i_next_elem = get_next_value_index(stacks, stacks->b[i]);
+		stacks->best_moves[i][0] = i_next_elem;
+		if (stacks->moves_a[i_next_elem] < 0 && stacks->moves_b[i] < 0)
 		{
-			if (stacks->moves_a[next_elem_index] > stacks->moves_b[current_index])
-				stacks->best_moves[1][i] = (stacks->moves_b[current_index] * -1);
+			if (stacks->moves_a[i_next_elem] > stacks->moves_b[i])
+				stacks->best_moves[i][1] = (stacks->moves_b[i] * -1);
 			else
-				stacks->best_moves[1][i] = stacks->moves_a[next_elem_index] * -1;
+				stacks->best_moves[i][1] = stacks->moves_a[i_next_elem] * -1;
 		}
-		else if (stacks->moves_a[next_elem_index] >= 0 && stacks->moves_b[current_index] >= 0)
+		else if (stacks->moves_a[i_next_elem] >= 0 && stacks->moves_b[i] >= 0)
 		{
-			if (stacks->moves_a[next_elem_index] > stacks->moves_b[current_index])
-				stacks->best_moves[1][i] = stacks->moves_a[next_elem_index];
+			if (stacks->moves_a[i_next_elem] > stacks->moves_b[i])
+				stacks->best_moves[i][1] = stacks->moves_a[i_next_elem];
 			else
-				stacks->best_moves[1][i] = stacks->moves_b[current_index];
+				stacks->best_moves[i][1] = stacks->moves_b[i];
 		}
 		else
 		{
-			if (stacks->moves_a[next_elem_index] < 0 )
-				stacks->best_moves[1][i] = (stacks->moves_a[next_elem_index] * -1) + stacks->moves_b[current_index];
+			if (stacks->moves_a[i_next_elem] < 0 )
+				stacks->best_moves[i][1] = (stacks->moves_a[i_next_elem] * -1) + stacks->moves_b[i];
 			else
-				stacks->best_moves[1][i] = stacks->moves_a[next_elem_index] + (stacks->moves_b[current_index] * -1);
+				stacks->best_moves[i][1] = stacks->moves_a[i_next_elem] + (stacks->moves_b[i] * -1);
 		}
 		i++;
 	}
