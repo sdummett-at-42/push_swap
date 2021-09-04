@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/04 17:02:55 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/04 17:27:10 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 #                                      #
 # ************************************ #
 
-CC			= clang -g3 #-fsanitize=address
+CC			= clang #-g3 -fsanitize=address
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= push_swap
 SRC			= push_swap.c \
@@ -59,7 +59,7 @@ SRC			= push_swap.c \
 			  debug/print_best_moves.c \
 			  debug/print_stacks.c
 			  
-INC			= -Iincludes
+INC			= -Iinclude
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)
 SRCBONUS	= NEANT

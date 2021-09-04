@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 17:00:56 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/04 18:17:08 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ int	main(int ac, char **av)
 		write(2, "Error\n", 6);
 		clean_exit(stacks);
 	}
+
 	if (has_duplicates(stacks) == 1)
 	{
 		write(2, "Error\n", 6);
 		clean_exit(stacks);
 	}
+
 	if (is_sorted(stacks))
 		clean_exit(stacks);
 	optimized_sort(stacks);
