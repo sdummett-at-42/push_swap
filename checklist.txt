@@ -1,0 +1,99 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    min_instructions.txt                               :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/08/30 02:30:27 by sdummett          #+#    #+#              #
+#    Updated: 2021/08/30 16:56:22 by sdummett         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+## MANDATORY PART
+
+# ERROR MANAGEMENT
+Non numeric parameters:
+=> Display "Error\n"
+
+Duplicate numeric parameters:
+=> Display "Error\n"
+
+Numeric parameters including one greater than MAX_INT:
+=> Display "Error\n"
+
+Without any parameters:
+=> Display anything
+
+# IDENTITY TEST
+3 ARGS:
+=> 2 OR 3 min_instructions
+
+./push_swap 42
+=> 0 instructions
+
+./push_swap 0 1 2 3
+=> 0 instructions
+
+./push_swap 0 1 2 3 4 5 6 7 8 9
+=> 0 instructions
+
+# SIMPLE VERSION
+ARG="2 1 0"; ./push_swap $ARG
+=> 2 or 3 instructions
+
+ARG="1 5 2 4 3"; ./push_swap $ARG
+=> no more than 12 instructions (kudos if it's 8 instructions)
+
+ARG="<5 random values>"; ./push_swap $ARG
+=> no more than 12 instructions
+
+# MIDDLE VERSION
+$ARG="<100 random values>"; ./push_swap $ARG
+=> less than 700
+=> less than 900
+=> less than 1100
+=> less than 1300
+=> less than 1500
+
+# ADVANCED VERSION
+$ARG="<500 random values>"; ./push_swap $ARG
+=> less than 5500
+=> less than 7000
+=> less than 8500
+=> less than 10000
+=> less than 11500
+
+## BONUS
+
+# ERROR MANAGEMENT
+Non numeric parameters:
+=> Display "Error\n"
+
+Duplicate numeric parameters:
+=> Display "Error\n"
+
+Numeric parameters including one greater than MAX_INT:
+=> Display "Error\n"
+
+Without any parameters:
+=> Display anything
+
+With valid parameters, and write action that doesn't exist:
+=> Diplay "Error\n"
+
+With valid parameters, and write action with one or several spaces
+before and/or after the action:
+=> Display "Error\n"
+
+# FALSE TESTS
+./checker "0 9 1 8 2 7 3 6 4 5" (then write [sa, pb, rrr])
+=> Display "KO\n"
+
+# RIGHT TESTS
+./checker "0 1 2" (without writing any instruction)
+=> Display "OK\n"
+
+./checker "0 9 1 8 2" (then write [pb, ra, pb, ra , sa, ra, pa, pa])
+=> Display "OK\n"
+

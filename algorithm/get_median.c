@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_b.c                                           :+:      :+:    :+:   */
+/*   get_median.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 23:13:53 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:23:43 by sdummett         ###   ########.fr       */
+/*   Created: 2021/08/30 17:08:00 by sdummett          #+#    #+#             */
+/*   Updated: 2021/08/30 19:12:09 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-** Instruction : sb
+** Compute and return the median of the inital stack a
 */
 
-void	swap_b(t_stacks *stacks)
+int	get_median(t_sorted *sorted)
 {
-	int	tmp;
+	unsigned int			index_median;
+	int						median;
 
-	if (stacks->nb_elem_b > 1)
-	{
-		tmp = stacks->b[stacks->nb_elem_a - 1];
-		stacks->b[stacks->nb_elem_b - 1] = stacks->b[stacks->nb_elem_a - 2];
-		stacks->b[stacks->nb_elem_b - 2] = tmp;
-		write(1, "sb\n", 3);
-	}
+	index_median = (sorted->total + 1) / 2;
+	if (index_median % 2 == 0)
+		median = sorted->list[index_median - 1];
+	else
+		median = (sorted->list[index_median - 1] + sorted->list[index_median]) / 2;
+	return (median);
 }

@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_b.c                                           :+:      :+:    :+:   */
+/*   move_stack_a_into_b.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 23:13:53 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:23:43 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/02 19:27:42 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/02 20:12:41 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
-** Instruction : sb
-*/
-
-void	swap_b(t_stacks *stacks)
+void	move_stack_a_int_b(t_stacks *stacks)
 {
-	int	tmp;
-
-	if (stacks->nb_elem_b > 1)
-	{
-		tmp = stacks->b[stacks->nb_elem_a - 1];
-		stacks->b[stacks->nb_elem_b - 1] = stacks->b[stacks->nb_elem_a - 2];
-		stacks->b[stacks->nb_elem_b - 2] = tmp;
-		write(1, "sb\n", 3);
-	}
+	while (stacks->nb_elem_a != 2)
+		push_b(stacks);
 }

@@ -1,18 +1,16 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    .gitignore                                         :+:      :+:    :+:    #
+#    test.sh                                            :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/08/16 20:13:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/30 20:20:51 by sdummett         ###   ########.fr        #
+#    Created: 2021/08/28 22:21:33 by sdummett          #+#    #+#              #
+#    Updated: 2021/08/28 22:25:41 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-*.out
-*.o
-*.a
-.vscode
-push_swap
-push_swap_visualizer
+#!/bin/bash
+
+# This test will only do the range 1 - 10
+ARG=$(ruby -e "puts (1..10).to_a.shuffle.join(' ')"); ./push_swap $ARG; echo $ARG

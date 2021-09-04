@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_b.c                                           :+:      :+:    :+:   */
+/*   move_min_to_top_with_rra.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 23:13:53 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:23:43 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/01 11:48:38 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/01 11:51:09 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
-** Instruction : sb
-*/
-
-void	swap_b(t_stacks *stacks)
+void	move_min_to_top_with_rra(t_stacks *stacks)
 {
-	int	tmp;
+	int	min_nb;
 
-	if (stacks->nb_elem_b > 1)
+	min_nb = get_min_number(stacks);
+	while (1)
 	{
-		tmp = stacks->b[stacks->nb_elem_a - 1];
-		stacks->b[stacks->nb_elem_b - 1] = stacks->b[stacks->nb_elem_a - 2];
-		stacks->b[stacks->nb_elem_b - 2] = tmp;
-		write(1, "sb\n", 3);
+		if (stacks->a[stacks->nb_elem_a - 1] == min_nb)
+			break ;
+		reverse_rotate_a(stacks);
 	}
 }

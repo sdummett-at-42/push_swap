@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_b.c                                           :+:      :+:    :+:   */
+/*   how_to_move_pseudo_sorted.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 23:13:53 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:23:43 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/01 11:28:03 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/04 15:00:06 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
-** Instruction : sb
-*/
-
-void	swap_b(t_stacks *stacks)
+void	how_to_move_pseudo_sorted(t_stacks *stacks, t_move_2 *move_2)
 {
-	int	tmp;
+	unsigned int	i_min;
 
-	if (stacks->nb_elem_b > 1)
-	{
-		tmp = stacks->b[stacks->nb_elem_a - 1];
-		stacks->b[stacks->nb_elem_b - 1] = stacks->b[stacks->nb_elem_a - 2];
-		stacks->b[stacks->nb_elem_b - 2] = tmp;
-		write(1, "sb\n", 3);
-	}
+	i_min = get_index_min(stacks);
+	if (i_min < stacks->nb_elem_a / 2)
+		move_2->rra = 1;
+	else
+		move_2->ra = 1;
 }
