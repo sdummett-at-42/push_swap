@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/04 17:27:10 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/05 13:22:07 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,9 @@ SRC			= push_swap.c \
 			  debug/print_sorted.c \
 			  debug/print_moves.c \
 			  debug/print_best_moves.c \
-			  debug/print_stacks.c
+			  debug/print_stacks.c \
+			  algorithm/three_elements_sort.c \
+			  algorithm/five_elements_sort.c
 			  
 INC			= -Iinclude
 includes	= $(wildcard includes/*.h)

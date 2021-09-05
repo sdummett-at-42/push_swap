@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 17:02:10 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/05 13:21:56 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,5 +134,7 @@ void			print_best_moves(t_stacks *stacks);
 long int		get_index_best_moves(t_stacks *stacks);
 void			move_elem(t_stacks *stacks);
 void			optimized_sort(t_stacks *stacks);
+void			three_elements_sort(t_stacks *stacks);
+void			five_elements_sort(t_stacks *stacks);
 
 #endif
