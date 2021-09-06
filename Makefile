@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/05 13:22:07 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/06 12:46:46 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,10 @@
 #                                      #
 # ************************************ #
 
+DEFAULT		= "\e[39m"
+GREEN		= "\e[32m"
+RED		= "\e[31m"
+MAGENTA		= "\e[35m"
 CC			= clang #-g3 -fsanitize=address
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= push_swap
@@ -59,7 +63,10 @@ SRC			= push_swap.c \
 			  debug/print_best_moves.c \
 			  debug/print_stacks.c \
 			  algorithm/three_elements_sort.c \
-			  algorithm/five_elements_sort.c
+			  algorithm/five_elements_sort.c \
+			  algorithm/move_opposite_way.c \
+			  algorithm/move_same_way_bot.c \
+			  algorithm/move_same_way_top.c
 			  
 INC			= -Iinclude
 includes	= $(wildcard includes/*.h)
@@ -75,6 +82,12 @@ OBJBONUS	=$(SRCBONUS:.c=.o)
 # ************************************ #
 
 all: $(NAME)
+
+enable_colors:
+	echo -e $(GREEN)
+
+disable_colors:
+	echO -e $(DEFAULT)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
