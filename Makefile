@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/06 15:21:01 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/06 16:33:47 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ MAGENTA		= "\e[35m"
 CC			= clang #-g3 -fsanitize=address
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= push_swap
+NAME_BONUS	= checker
 SRC			= push_swap.c \
 			  instructions/swap_a.c \
 			  instructions/swap_b.c \
@@ -71,7 +72,11 @@ SRC			= push_swap.c \
 INC			= -Iinclude
 includes	= $(wildcard includes/*.h)
 OBJ			= $(SRC:.c=.o)
-SRCBONUS	= NEANT
+SRCBONUS	= checker_src/checker.c \
+				checker_src/ft_atoi_on_steroid.c \
+				checker_src/clean_exit.c \
+				checker_src/is_number.c \
+				checker_src/has_duplicates.c
 
 OBJBONUS	=$(SRCBONUS:.c=.o)
 
@@ -93,7 +98,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 bonus: $(OBJBONUS)
-	$(CC) $(CFLAGS) $(OBJBONUS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJBONUS) -o $(NAME_BONUS)
 
 %.o: %.c $(includes)
 	$(CC) $(INC) -c $(CFLAGS) -o $@ $<
