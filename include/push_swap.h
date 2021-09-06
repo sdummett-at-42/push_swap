@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/06 12:20:00 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/06 15:54:42 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ int				is_number(char *arg);
 int				has_duplicates(t_stacks *stacks);
 char			**ft_split(char const *s, char c);
 int				is_sorted(t_stacks *stacks);
-void			clean_exit(t_stacks *stacks);
+void			clean_exit(t_stacks *stacks, int exit_status);
 
 /*
 ** Debug funcs

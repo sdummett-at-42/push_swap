@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/06 15:41:59 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/06 15:55:34 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +39,20 @@ int	main(int ac, char **av)
 	if (init_stacks(stacks, ac, av) < 0 || ac < 2)
 	{
 		write(2, "Error\n", 6);
-		clean_exit(stacks);
+		clean_exit(stacks, 2);
 	}
 	if (has_duplicates(stacks) == 1)
 	{
 		write(2, "Error\n", 6);
-		clean_exit(stacks);
+		clean_exit(stacks, 3);
 	}
 	if (is_sorted(stacks))
-		clean_exit(stacks);
+		clean_exit(stacks, 0);
 	if (stacks->nb_elem_a <= 3)
 		three_elements_sort(stacks);
 	else if (stacks->nb_elem_a <= 5)
 		five_elements_sort(stacks);
 	else
 		optimized_sort(stacks);
-	clean_exit(stacks);
+	clean_exit(stacks, 0);
 }
