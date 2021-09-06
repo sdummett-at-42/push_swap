@@ -6,16 +6,35 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/05 13:32:04 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/06 15:41:59 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int	args_are_numbers(int ac, char **av)
+{
+	int	i;
+
+	i = 1;
+	while (i < ac)
+	{
+		if (is_number(av[i]) == 0)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 int	main(int ac, char **av)
 {
 	t_stacks	*stacks;
 
+	if (args_are_numbers(ac, av) == 0)
+	{
+		write(2, "Error\n", 6);
+		exit(1);
+	}
 	stacks = create_stacks(ac);
 	if (init_stacks(stacks, ac, av) < 0 || ac < 2)
 	{

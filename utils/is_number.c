@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 17:05:30 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/20 17:05:51 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/06 15:40:53 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	is_number(char *arg)
 	while (arg[i] != '\0')
 	{
 		if (!(arg[i] >= '0' && arg[i] <= '9'))
-			return (1);
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }

@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/06 12:46:46 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/06 15:21:01 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@
 
 DEFAULT		= "\e[39m"
 GREEN		= "\e[32m"
-RED		= "\e[31m"
+RED			= "\e[31m"
 MAGENTA		= "\e[35m"
 CC			= clang #-g3 -fsanitize=address
 CFLAGS		= -Wall -Werror -Wextra
