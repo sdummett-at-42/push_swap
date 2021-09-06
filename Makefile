@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/06 16:33:47 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/07 00:05:54 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,26 @@ SRCBONUS	= checker_src/checker.c \
 				checker_src/ft_atoi_on_steroid.c \
 				checker_src/clean_exit.c \
 				checker_src/is_number.c \
-				checker_src/has_duplicates.c
+				checker_src/has_duplicates.c \
+				checker_src/debug/print_stacks.c \
+				checker_src/instructions/swap_a.c \
+				checker_src/instructions/swap_b.c \
+				checker_src/instructions/swap_a_b.c \
+				checker_src/instructions/push_a.c \
+				checker_src/instructions/push_b.c \
+				checker_src/instructions/rotate_a.c \
+				checker_src/instructions/rotate_b.c \
+				checker_src/instructions/rotate_a_b.c \
+				checker_src/instructions/reverse_rotate_a.c \
+				checker_src/instructions/reverse_rotate_b.c \
+				checker_src/instructions/reverse_rotate_a_b.c \
+				checker_src/get_next_line/get_next_line_utils.c \
+				checker_src/get_next_line/get_next_line.c \
+				checker_src/stacks_utils/stacks_management.c \
+				checker_src/get_instructions.c \
+				checker_src/t_instruc_utils/t_instruc_utils.c \
+				checker_src/ft_memcmp.c \
+				checker_src/ft_strlen.c
 
 OBJBONUS	=$(SRCBONUS:.c=.o)
 
