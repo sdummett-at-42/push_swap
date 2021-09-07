@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/07 01:11:48 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/07 18:12:41 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,10 +36,10 @@ SRC			= push_swap.c \
 			  instructions/reverse_rotate_a.c \
 			  instructions/reverse_rotate_b.c \
 			  instructions/reverse_rotate_a_b.c \
-			  utils/is_number.c \
-			  utils/has_duplicates.c \
+			  boolean/is_number.c \
+			  boolean/has_duplicates.c \
 			  utils/ft_atoi_on_steroid.c \
-			  utils/is_sorted.c \
+			  boolean/is_sorted.c \
 			  utils/clean_exit.c \
 			  stacks/stacks_utils.c \
 			  algorithm/sort_stack_a_into_another_tab.c \
@@ -48,7 +48,7 @@ SRC			= push_swap.c \
 			  algorithm/get_extreme_numbers.c \
 			  algorithm/get_index_max.c \
 			  algorithm/get_index_min.c \
-			  algorithm/is_pseudo_sorted.c \
+			  boolean/is_pseudo_sorted.c \
 			  algorithm/how_to_move_pseudo_sorted.c \
 			  algorithm/move_min_to_top_with_ra.c \
 			  algorithm/move_min_to_top_with_rra.c \
@@ -67,7 +67,9 @@ SRC			= push_swap.c \
 			  algorithm/five_elements_sort.c \
 			  algorithm/move_opposite_way.c \
 			  algorithm/move_same_way_bot.c \
-			  algorithm/move_same_way_top.c
+			  algorithm/move_same_way_top.c \
+			  check_errors.c \
+			  boolean/args_are_numbers.c
 			  
 INC			= -Iinclude
 includes	= $(wildcard includes/*.h)
@@ -75,8 +77,8 @@ OBJ			= $(SRC:.c=.o)
 SRCBONUS	= checker_src/checker.c \
 				checker_src/ft_atoi_on_steroid.c \
 				checker_src/clean_exit.c \
-				checker_src/is_number.c \
-				checker_src/has_duplicates.c \
+				checker_src/boolean/is_number.c \
+				checker_src/boolean/has_duplicates.c \
 				checker_src/debug/print_stacks.c \
 				checker_src/instructions/swap_a.c \
 				checker_src/instructions/swap_b.c \
@@ -107,7 +109,10 @@ SRCBONUS	= checker_src/checker.c \
 				checker_src/instructions_check/is_sa.c \
 				checker_src/instructions_check/is_sb.c \
 				checker_src/instructions_check/is_ss.c \
-				checker_src/is_sorted.c
+				checker_src/boolean/is_sorted.c \
+				checker_src/do_instructions.c \
+				checker_src/check_errors/check_errors.c \
+				checker_src/boolean/args_are_numbers.c
 
 OBJBONUS	=$(SRCBONUS:.c=.o)
 
@@ -140,5 +145,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f $(NAME_BONUS)
 
 re: fclean all 

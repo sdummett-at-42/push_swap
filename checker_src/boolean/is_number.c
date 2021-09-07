@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   has_duplicates.c                                   :+:      :+:    :+:   */
+/*   is_number.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 17:27:39 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/27 22:27:56 by sdummett         ###   ########.fr       */
+/*   Created: 2021/08/20 17:05:30 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/07 18:05:40 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
-int	has_duplicates(t_stacks *stacks)
+int	is_number(char *arg)
 {
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
 
 	i = 0;
-	while (i < stacks->nb_elem_a)
+	while (arg[i] == ' ' || (arg[i] >= 9 && arg[i] <= 13))
+		i++;
+	if (arg[i] == '-' || arg[i] == '+')
+		i++;
+	while (arg[i] != '\0')
 	{
-		j = i + 1;
-		while (j < stacks->nb_elem_a)
-		{
-			if (stacks->a[i] == stacks->a[j])
-				return (1);
-			j++;
-		}
+		if (!(arg[i] >= '0' && arg[i] <= '9'))
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }

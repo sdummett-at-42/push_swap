@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/06 15:54:42 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/07 17:50:27 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,10 +137,23 @@ void			optimized_sort(t_stacks *stacks);
 void			three_elements_sort(t_stacks *stacks);
 void			five_elements_sort(t_stacks *stacks);
 void			move_opposite_way(t_stacks *stacks, long int moves_a, \
-				long int moves_b);
+					long int moves_b);
 void			move_same_way_bot(t_stacks *stacks, \
-				long int moves_a, long int moves_b);
+					long int moves_a, long int moves_b);
 void			move_same_way_top(t_stacks *stacks, \
-				long int moves_a, long int moves_b);
+					long int moves_a, long int moves_b);
+
+/*
+** Errors check
+*/
+void			check_errors_on_args(int ac, char **av);
+void			check_errors_on_stacks_init(t_stacks *stacks, \
+					int ac, char **av);
+void			check_errors_on_duplicates(t_stacks *stacks);
+
+/*
+** Boolean functions
+*/
+int				args_are_numbers(int ac, char **av);
 
 #endif

@@ -6,12 +6,12 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 12:03:49 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/06 23:12:14 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/07 15:45:22 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_BONUS_H
-# define GET_NEXT_LINE_BONUS_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 # define BUFFER_SIZE 1024
 # include <fcntl.h>

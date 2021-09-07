@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 00:50:47 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 01:52:32 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/07 14:34:33 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	is_rb(t_instruc *lst, int *res)
 {
 	int	len;
-	
+
 	if (*res == 1)
 	{
 		len = ft_strlen(lst->content);

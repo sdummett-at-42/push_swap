@@ -6,11 +6,11 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 21:25:28 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 16:21:33 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/07 18:07:15 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 int	compute(const char *str, long int nb, int sign, unsigned char *overflow)
 {

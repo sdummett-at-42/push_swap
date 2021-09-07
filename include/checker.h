@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:23:56 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 01:39:40 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/07 18:10:48 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # define RRA 247
 # define RRB 246
 # define RRR 245
+
 /*
 ** Temporary # include <stdio.h>
 */
@@ -53,6 +54,19 @@ int			has_duplicates(t_stacks *stacks);
 int			is_sorted(t_stacks *stacks);
 
 /*
+** Boolean
+*/
+int			args_are_numbers(int ac, char **av);
+
+/*
+** Error checks
+*/
+void		check_errors_on_args(int ac, char **av);
+void		check_errors_on_stacks_init(t_stacks *stacks, int ac, char **av);
+void		check_errors_on_duplicates(t_stacks *stacks);
+void		check_errors_on_instructions(t_instruc *lst, t_stacks *stacks);
+
+/*
 ** Stacks management
 */
 int			init_stacks(t_stacks *stacks, int ac, char **av);
@@ -77,7 +91,6 @@ void		reverse_rotate_a_b(t_stacks *stacks);
 ** get_next_line
 */
 int			get_next_line(int fd, char **line);
-
 int			ft_memcmp(const void *b1, const void *b2, size_t len);
 int			ft_strlen(char *str);
 
@@ -88,6 +101,8 @@ t_instruc	*lstnew(char *line);
 void		lstadd_back(t_instruc **alst, t_instruc *new);
 void		lst_clear(t_instruc **lst);
 t_instruc	*get_instructions(void);
+void		do_instructions(t_stacks *stacks, t_instruc *lst);
+int			are_valid_instructions(t_instruc *lst);
 
 /*
 ** Instructions check

@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    min_instructions.txt                               :+:      :+:    :+:    #
+#    checklist.txt                                      :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 02:30:27 by sdummett          #+#    #+#              #
-#    Updated: 2021/08/30 16:56:22 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/06 15:48:33 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,4 +96,3 @@ before and/or after the action:
 
 ./checker "0 9 1 8 2" (then write [pb, ra, pb, ra , sa, ra, pa, pa])
 => Display "OK\n"
-
