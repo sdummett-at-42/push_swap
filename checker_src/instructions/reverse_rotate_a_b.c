@@ -6,11 +6,11 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 19:18:02 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 16:26:29 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/07 02:10:50 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 void	rrr_reverse_rotate_a(t_stacks *stacks)
 {
@@ -50,5 +50,4 @@ void	reverse_rotate_a_b(t_stacks *stacks)
 {
 	rrr_reverse_rotate_a(stacks);
 	rrr_reverse_rotate_b(stacks);
-	write(1, "rrr\n", 4);
 }

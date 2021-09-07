@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate_a.c                                 :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 19:10:43 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 02:10:52 by sdummett         ###   ########.fr       */
+/*   Created: 2021/08/27 22:10:35 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/07 02:09:48 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	reverse_rotate_a(t_stacks *stacks)
+int	is_sorted(t_stacks *stacks)
 {
-	int				tmp;
 	unsigned int	i;
 
-	if (stacks->nb_elem_a < 2)
-		return ;
-	i = 0;
-	tmp = stacks->a[i];
-	while (i < stacks->nb_elem_a - 1)
+	if (stacks->nb_elem_a > 0)
 	{
-		stacks->a[i] = stacks->a[i + 1];
-		i++;
-	}
-	stacks->a[i] = tmp;
+		i = stacks->nb_elem_a - 1;
+		while (i > 0)
+		{
+			if (stacks->a[i] > stacks->a[i - 1])
+			{
+				return (0);
+			}
+			i--;
+		}
+		return (1);
+		}
+	return (0);
 }

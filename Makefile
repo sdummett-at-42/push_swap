@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/07 00:05:54 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/07 01:11:48 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,7 +95,19 @@ SRCBONUS	= checker_src/checker.c \
 				checker_src/get_instructions.c \
 				checker_src/t_instruc_utils/t_instruc_utils.c \
 				checker_src/ft_memcmp.c \
-				checker_src/ft_strlen.c
+				checker_src/ft_strlen.c \
+				checker_src/instructions_check/is_pa.c \
+				checker_src/instructions_check/is_pb.c \
+				checker_src/instructions_check/is_ra.c \
+				checker_src/instructions_check/is_rb.c \
+				checker_src/instructions_check/is_rr.c \
+				checker_src/instructions_check/is_rra.c \
+				checker_src/instructions_check/is_rrb.c \
+				checker_src/instructions_check/is_rrr.c \
+				checker_src/instructions_check/is_sa.c \
+				checker_src/instructions_check/is_sb.c \
+				checker_src/instructions_check/is_ss.c \
+				checker_src/is_sorted.c
 
 OBJBONUS	=$(SRCBONUS:.c=.o)
 

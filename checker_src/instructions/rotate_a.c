@@ -6,11 +6,11 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 18:52:13 by sdummett          #+#    #+#             */
-/*   Updated: 2021/08/19 19:03:31 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/07 02:10:58 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 void	rotate_a(t_stacks *stacks)
 {
@@ -27,5 +27,4 @@ void	rotate_a(t_stacks *stacks)
 		i--;
 	}
 	stacks->a[i] = tmp;
-	write(1, "ra\n", 3);
 }

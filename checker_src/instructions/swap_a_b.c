@@ -6,11 +6,11 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 23:27:23 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/03 15:30:54 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/07 02:11:09 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 /*
 ** Instruction : ss
@@ -44,5 +44,4 @@ void	swap_a_b(t_stacks *stacks)
 {
 	ss_swap_a(stacks);
 	ss_swap_b(stacks);
-	write(1, "ss\n", 3);
 }

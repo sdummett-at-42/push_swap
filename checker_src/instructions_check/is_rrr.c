@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate_a.c                                 :+:      :+:    :+:   */
+/*   is_rrr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 19:10:43 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 02:10:52 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/07 00:50:59 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/07 01:53:08 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	reverse_rotate_a(t_stacks *stacks)
+void	is_rrr(t_instruc *lst, int *res)
 {
-	int				tmp;
-	unsigned int	i;
-
-	if (stacks->nb_elem_a < 2)
-		return ;
-	i = 0;
-	tmp = stacks->a[i];
-	while (i < stacks->nb_elem_a - 1)
+	int	len;
+	
+	if (*res == 1)
 	{
-		stacks->a[i] = stacks->a[i + 1];
-		i++;
+		len = ft_strlen(lst->content);
+		if (len < 3)
+			len = 3;
+		if (ft_memcmp(lst->content, "rrr", len) == 0)
+		{
+			*res = 0;
+			lst->instruction = RRR;
+		}
 	}
-	stacks->a[i] = tmp;
 }
