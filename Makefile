@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/07 18:12:41 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/08 16:18:12 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,52 +24,50 @@ CC			= clang #-g3 -fsanitize=address
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= push_swap
 NAME_BONUS	= checker
-SRC			= push_swap.c \
-			  instructions/swap_a.c \
-			  instructions/swap_b.c \
-			  instructions/swap_a_b.c \
-			  instructions/push_a.c \
-			  instructions/push_b.c \
-			  instructions/rotate_a.c \
-			  instructions/rotate_b.c \
-			  instructions/rotate_a_b.c \
-			  instructions/reverse_rotate_a.c \
-			  instructions/reverse_rotate_b.c \
-			  instructions/reverse_rotate_a_b.c \
-			  boolean/is_number.c \
-			  boolean/has_duplicates.c \
-			  utils/ft_atoi_on_steroid.c \
-			  boolean/is_sorted.c \
-			  utils/clean_exit.c \
-			  stacks/stacks_utils.c \
-			  algorithm/sort_stack_a_into_another_tab.c \
-			  algorithm/get_median.c \
-			  algorithm/split_until_median.c \
-			  algorithm/get_extreme_numbers.c \
-			  algorithm/get_index_max.c \
-			  algorithm/get_index_min.c \
-			  boolean/is_pseudo_sorted.c \
-			  algorithm/how_to_move_pseudo_sorted.c \
-			  algorithm/move_min_to_top_with_ra.c \
-			  algorithm/move_min_to_top_with_rra.c \
-			  algorithm/move_stack_a_into_b.c \
-			  algorithm/count_moves.c \
-			  algorithm/get_next_value_index.c\
-			  algorithm/get_best_moves.c \
-			  algorithm/get_index_best_move.c \
-			  algorithm/move_elem.c \
-			  algorithm/optimized_sort.c \
-			  debug/print_sorted.c \
-			  debug/print_moves.c \
-			  debug/print_best_moves.c \
-			  debug/print_stacks.c \
-			  algorithm/three_elements_sort.c \
-			  algorithm/five_elements_sort.c \
-			  algorithm/move_opposite_way.c \
-			  algorithm/move_same_way_bot.c \
-			  algorithm/move_same_way_top.c \
-			  check_errors.c \
-			  boolean/args_are_numbers.c
+SRC			= src_push_swap/push_swap.c \
+			  src_push_swap/instructions/swap_a.c \
+			  src_push_swap/instructions/swap_b.c \
+			  src_push_swap/instructions/swap_a_b.c \
+			  src_push_swap/instructions/push_a.c \
+			  src_push_swap/instructions/push_b.c \
+			  src_push_swap/instructions/rotate_a.c \
+			  src_push_swap/instructions/rotate_b.c \
+			  src_push_swap/instructions/rotate_a_b.c \
+			  src_push_swap/instructions/reverse_rotate_a.c \
+			  src_push_swap/instructions/reverse_rotate_b.c \
+			  src_push_swap/instructions/reverse_rotate_a_b.c \
+			  src_push_swap/boolean/is_number.c \
+			  src_push_swap/boolean/has_duplicates.c \
+			  src_push_swap/utils/ft_atoi_on_steroid.c \
+			  src_push_swap/boolean/is_sorted.c \
+			  src_push_swap/utils/clean_exit.c \
+			  src_push_swap/stacks/stacks_utils.c \
+			  src_push_swap/algorithm/sort_stack_a_into_another_tab.c \
+			  src_push_swap/algorithm/get_median.c \
+			  src_push_swap/algorithm/split_until_median.c \
+			  src_push_swap/algorithm/get_extreme_numbers.c \
+			  src_push_swap/algorithm/get_extreme_index.c \
+			  src_push_swap/boolean/is_circular_sorted.c \
+			  src_push_swap/algorithm/how_to_sort_circular_sorted_stack.c \
+			  src_push_swap/algorithm/move_min_to_top.c \
+			  src_push_swap/algorithm/move_stack_a_into_b.c \
+			  src_push_swap/algorithm/count_moves.c \
+			  src_push_swap/algorithm/get_next_value_index.c\
+			  src_push_swap/algorithm/get_best_moves.c \
+			  src_push_swap/algorithm/get_index_best_move.c \
+			  src_push_swap/algorithm/move_elem.c \
+			  src_push_swap/algorithm/circular_sort.c \
+			  src_push_swap/debug/print_sorted.c \
+			  src_push_swap/debug/print_moves.c \
+			  src_push_swap/debug/print_best_moves.c \
+			  src_push_swap/debug/print_stacks.c \
+			  src_push_swap/algorithm/three_elements_sort.c \
+			  src_push_swap/algorithm/five_elements_sort.c \
+			  src_push_swap/algorithm/move_opposite_way.c \
+			  src_push_swap/algorithm/move_same_way_bot.c \
+			  src_push_swap/algorithm/move_same_way_top.c \
+			  src_push_swap/check_errors.c \
+			  src_push_swap/boolean/args_are_numbers.c
 			  
 INC			= -Iinclude
 includes	= $(wildcard includes/*.h)
