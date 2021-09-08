@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 17:48:46 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/08 14:38:30 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	main(int ac, char **av)
 {
 	t_stacks	*stacks;
 
+	if (ac < 2)
+		return (0);
 	check_errors_on_args(ac, av);
 	stacks = create_stacks(ac);
 	check_errors_on_stacks_init(stacks, ac, av);
