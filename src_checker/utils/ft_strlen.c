@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 00:04:40 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 00:05:43 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:12:43 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** A home made strlen
+*/
 
 int	ft_strlen(char *str)
 {

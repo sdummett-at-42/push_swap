@@ -6,14 +6,14 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 12:19:43 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 13:04:38 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:18:27 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-** Initialiaze struct s_stacks
+** Initialize struct s_stacks
 */
 
 int	init_stacks(t_stacks *stacks, int ac, char **av)

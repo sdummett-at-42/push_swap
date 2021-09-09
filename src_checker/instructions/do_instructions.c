@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 14:45:03 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 14:48:43 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:00:31 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** do_instructions() will perfom all the instructions on the stacks
+*/
 
 void	continue_do_instructions(t_stacks *stacks, t_instruc *lst)
 {

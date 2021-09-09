@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 21:25:28 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 18:07:15 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:02:24 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** An ft_atoi that also checks if the number overflow/underflow an int 
+*/
 
 int	compute(const char *str, long int nb, int sign, unsigned char *overflow)
 {
@@ -47,5 +51,7 @@ int	ft_atoi_on_steroid(const char *str, unsigned char *overflow)
 			sign = sign * -1;
 		str++;
 	}
+	if (!(*str >= '0' && *str <= '9'))
+		*overflow = 1;
 	return (compute(str, nb, sign, overflow));
 }

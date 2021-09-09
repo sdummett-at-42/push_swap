@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 14:24:05 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 14:24:25 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:03:00 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Initialiaze struct s_stacks
+*/
 
 int	init_stacks(t_stacks *stacks, int ac, char **av)
 {

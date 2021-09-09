@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 19:27:42 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:05:25 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:20:06 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*
+** It moves all the element of stack A into B leaving only two elements
+*/
 
 void	move_stack_a_into_b(t_stacks *stacks)
 {

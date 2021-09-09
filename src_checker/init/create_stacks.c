@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 14:23:23 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 14:23:49 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 14:57:43 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Create and initialize structure for holding main datas for the algorithm
+*/
 
 t_stacks	*create_stacks(int ac)
 {

@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 14:08:59 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 14:10:01 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:13:04 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Function that clear a linked list
+*/
 
 void	lst_clear(t_instruc **lst)
 {

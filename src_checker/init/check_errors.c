@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:40:41 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 15:40:55 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 14:57:11 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** These functions check errors
+*/
 
 void	check_errors_on_args(int ac, char **av)
 {

@@ -6,11 +6,16 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 23:09:06 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 00:17:48 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:01:39 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** While EOF isn't reached get_instructions will store instructions received
+** from stdin on a linked list
+*/
 
 t_instruc	*get_instructions(void)
 {

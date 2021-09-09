@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:23:04 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 13:59:38 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 14:56:27 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Entry point of checker program
+*/
 
 int	main(int ac, char **av)
 {

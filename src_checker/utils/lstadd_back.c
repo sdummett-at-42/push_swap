@@ -6,11 +6,16 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 14:10:23 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 14:15:23 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:14:49 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Function that add a new element at the end of a linked list or create 
+** the first element if *alst is NULL
+*/
 
 void	lstadd_back(t_instruc **alst, t_instruc *new)
 {

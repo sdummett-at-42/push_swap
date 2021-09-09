@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 14:15:46 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 14:16:01 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 15:13:21 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Function that create a new element
+*/
 
 t_instruc	*lstnew(char *line)
 {

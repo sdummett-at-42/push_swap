@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 22:22:01 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 18:07:07 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 14:58:36 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Deallocate the memory then exit cleanly
+*/
 
 void	clean_exit(t_stacks *stacks, int exit_status)
 {
