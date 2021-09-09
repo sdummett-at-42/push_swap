@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 14:40:18 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 20:51:56 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,8 @@ int				get_median(int *sorted, int nb_elem);
 void			split_until_median(t_stacks *stacks);
 void			move_min_to_top_with_ra(t_stacks *stacks);
 void			move_min_to_top_with_rra(t_stacks *stacks);
-void			how_to_sort_circular_sorted_stack(t_stacks *stacks, t_move *move);
+void			how_to_sort_circular_sorted_stack(t_stacks *stacks, \
+					t_move *move);
 void			move_stack_a_into_b(t_stacks *stacks);
 void			count_moves(t_stacks *stacks);
 void			get_best_moves(t_stacks *stacks);
