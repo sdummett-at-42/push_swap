@@ -6,40 +6,23 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:52:14 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 16:46:29 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:55:38 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-** Init t_sorted structure
-*/
-t_sorted	*init_med(void)
-{
-	t_sorted	*new;
-
-	new = malloc(sizeof(t_sorted));
-	if (new == NULL)
-		return (NULL);
-	new->list = NULL;
-	new->total = 0;
-	return (new);
-}
-
-/*
 ** Copy stack a into med.list
 */
-void	copy_stack_a(t_stacks *stacks, t_sorted *sorted)
+void	copy_stack_a(int *sorted, t_stacks *stacks)
 {
 	unsigned int	i;
 
 	i = stacks->nb_elem_a;
-	sorted->total = stacks->nb_elem_a;
-	sorted->list = malloc(sizeof(int) * sorted->total);
 	while (i > 0)
 	{
-		sorted->list[i - 1] = stacks->a[i - 1];
+		sorted[i - 1] = stacks->a[i - 1];
 		i--;
 	}
 }
@@ -47,23 +30,23 @@ void	copy_stack_a(t_stacks *stacks, t_sorted *sorted)
 /*
 ** Sort the list of numbers
 */
-void	sort_list(t_sorted *sorted)
+void	bubble_sort(int *sorted, t_stacks *stacks)
 {
 	unsigned int	i;
 	unsigned int	j;
 	int				swap;
 
 	i = 0;
-	while (i < sorted->total)
+	while (i < stacks->nb_elem_a)
 	{
 		j = i + 1;
-		while (j < sorted->total)
+		while (j < stacks->nb_elem_a)
 		{
-			if (sorted->list[i] > sorted->list[j])
+			if (sorted[i] > sorted[j])
 			{
-				swap = sorted->list[j];
-				sorted->list[j] = sorted->list[i];
-				sorted->list[i] = swap;
+				swap = sorted[j];
+				sorted[j] = sorted[i];
+				sorted[i] = swap;
 			}
 			j++;
 		}
@@ -71,12 +54,12 @@ void	sort_list(t_sorted *sorted)
 	}
 }
 
-t_sorted	*sort_stack_a_into_another_tab(t_stacks *stacks)
+int	*sort_stack_a_into_another_tab(t_stacks *stacks)
 {
-	t_sorted	*sorted;
+	int	*sorted;
 
-	sorted = init_med();
-	copy_stack_a(stacks, sorted);
-	sort_list(sorted);
+	sorted = malloc(sizeof(int) * stacks->nb_elem_a);
+	copy_stack_a(sorted, stacks);
+	bubble_sort(sorted, stacks);
 	return (sorted);
 }

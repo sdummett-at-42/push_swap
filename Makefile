@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/09 12:23:27 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/09 12:58:25 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,6 @@ SRC			= src_push_swap/push_swap.c \
 			  src_push_swap/algorithm/get_index_best_move.c \
 			  src_push_swap/algorithm/move_elem.c \
 			  src_push_swap/algorithm/circular_sort.c \
-			  src_push_swap/debug/print_sorted.c \
 			  src_push_swap/debug/print_moves.c \
 			  src_push_swap/debug/print_best_moves.c \
 			  src_push_swap/debug/print_stacks.c \

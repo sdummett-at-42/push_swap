@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 12:15:26 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:59:00 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,6 @@ typedef struct s_move
 }	t_move;
 
 /*
-** Structure to get the numbers sorted
-*/
-typedef struct s_sorted
-{
-	int				*list;
-	unsigned int	total;
-}	t_sorted;
-
-/*
 ** Structure for holding the two stacks
 */
 
@@ -69,13 +60,12 @@ typedef struct s_stacks
 	long int		*moves_a;
 	long int		*moves_b;
 	long int		**best_moves;
-	t_sorted		*sorted;
+	int				*sorted;
 }	t_stacks;
 
 /*
 ** Debug funcs
 */
-void			print_sorted(t_sorted *sorted);
 void			print_best_moves(t_stacks *stacks);
 void			print_moves(t_stacks *stacks);
 void			print_stacks(t_stacks *stacks);
@@ -113,8 +103,8 @@ void			clean_exit(t_stacks *stacks, int exit_status);
 /*
 ** Algorithm
 */
-t_sorted		*sort_stack_a_into_another_tab(t_stacks *stacks);
-int				get_median(t_sorted *sorted);
+int				*sort_stack_a_into_another_tab(t_stacks *stacks);
+int				get_median(int *sorted, int nb_elem);
 void			split_until_median(t_stacks *stacks);
 int				get_min_number(t_stacks *stacks);
 int				get_max_number(t_stacks *stacks);

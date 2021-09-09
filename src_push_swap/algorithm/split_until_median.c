@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:41:31 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/04 18:31:27 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:56:15 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	get_last_number_at_median(t_stacks *stacks)
 	int				nb_at_median;
 	unsigned int	i;
 
-	median = get_median(stacks->sorted);
+	median = get_median(stacks->sorted, stacks->nb_elem_a);
 	i = 1;
 	nb_at_median = median;
 	while (i < stacks->nb_elem_a)
@@ -34,7 +34,7 @@ int	get_last_number_at_median(t_stacks *stacks)
 	return (nb_at_median);
 }
 
-int	is_splitted(t_stacks *stacks, int nb_at_median)
+bool	is_splitted(t_stacks *stacks, int nb_at_median)
 {
 	unsigned int	i;
 
@@ -53,7 +53,7 @@ void	split_until_median(t_stacks *stacks)
 	int	nb_at_median;
 
 	nb_at_median = get_last_number_at_median(stacks);
-	while (is_splitted(stacks, nb_at_median) != 1)
+	while (is_splitted(stacks, nb_at_median) == false)
 	{
 		if (stacks->a[stacks->nb_elem_a - 1] <= nb_at_median)
 			push_b(stacks);
