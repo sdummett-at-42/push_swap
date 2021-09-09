@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/09 14:42:37 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/09 14:53:36 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -134,8 +134,10 @@ disable_colors:
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-bonus: $(OBJBONUS)
+$(NAME_BONUS): $(OBJBONUS)
 	$(CC) $(CFLAGS) $(OBJBONUS) -o $(NAME_BONUS)
+
+bonus: $(NAME_BONUS)
 
 %.o: %.c $(includes)
 	$(CC) $(INC) -c $(CFLAGS) -o $@ $<
