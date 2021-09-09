@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/09 16:31:10 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/09 19:56:26 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,13 @@
 #                                      #
 # ************************************ #
 
-DEFAULT		= 		"\e[39m"
-GREEN		= 		"\e[32m"
-RED			=		 "\e[31m"
-MAGENTA		= 		"\e[35m"
+MAG	= \033[0;35m
+WHT	= \033[0;37m
+BLK	= \033[0;30m
+RED	= \033[0;31m
+YEL	= \033[0;33m
+GRN	= \033[0;32m
+RM	= rm -f
 CC			= 		clang #-g3 -fsanitize=address
 CFLAGS		= 		-Wall -Werror -Wextra
 NAME		= 		push_swap
@@ -75,19 +78,23 @@ OBJBONUS	=$(SRCBONUS:.c=.o)
 #                                      #
 # ************************************ #
 
-all: $(NAME)
-
-enable_colors:
-	echo -e $(GREEN)
-
-disable_colors:
-	echO -e $(DEFAULT)
+all: $(NAME) $(NAME_BONUS)
+	@printf "$(MAG)                  _                                $(MAG)\n"
+	@printf "$(MAG)                 | |                               $(MAG)\n"
+	@printf "$(MAG)  _ __  _   _ ___| |__    _____      ____ _ _ __   $(MAG)\n"
+	@printf "$(MAG) | '_ \| | | / __| '_ \  / __\ \ /\ / / _\` | '_ \  $(MAG)\n"
+	@printf "$(MAG) | |_) | |_| \__ \ | | | \__ \\\ V  V / (_| | |_) | $(MAG)\n"
+	@printf "$(MAG) | .__/ \__,_|___/_| |_| |___/ \_/\_/ \__,_| .__/  $(MAG)\n"
+	@printf "$(MAG) | |                 ______                | |     $(MAG)\n"
+	@printf "$(MAG) |_|                |______|               |_|     $(MAG)\n"
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@printf "$(WHT)[$(GRN)$(NAME) COMPILED$(WHT)]\n"
 
 $(NAME_BONUS): $(OBJBONUS)
 	$(CC) $(CFLAGS) $(OBJBONUS) -o $(NAME_BONUS)
+	@printf "$(WHT)[$(GRN)$(NAME_BONUS) COMPILED$(WHT)]\n"
 
 bonus: $(NAME_BONUS)
 
@@ -95,11 +102,14 @@ bonus: $(NAME_BONUS)
 	$(CC) $(INC) -c $(CFLAGS) -o $@ $<
 
 clean:
-	rm -f $(OBJ)
-	rm -f $(OBJBONUS)
+	$(RM) $(OBJ)
+	$(RM) $(OBJBONUS)
+	@printf "$(WHT)[$(YEL)$(NAME) OBJS REMOVED$(WHT)]\n"
 
 fclean: clean
-	rm -f $(NAME)
-	rm -f $(NAME_BONUS)
+	$(RM) $(NAME)
+	$(RM) $(NAME_BONUS)
+	@printf "$(WHT)[$(YEL)$(NAME) BINARIES REMOVED$(WHT)]\n"
 
-re: fclean all 
+re: fclean all bonus
+
