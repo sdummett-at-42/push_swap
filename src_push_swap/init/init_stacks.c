@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 12:19:43 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 12:26:05 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 13:04:38 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	init_stacks(t_stacks *stacks, int ac, char **av)
 
 	i = 0;
 	overflow = 0;
-	while (i != stacks->nb_elem_total)
+	while (i != stacks->nb_elem_a)
 	{
 		if (is_number(av[ac - 1]) == false)
 			return (1);

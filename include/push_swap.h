@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 12:59:00 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 13:06:52 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ typedef struct s_stacks
 {
 	int				*a;
 	int				*b;
-	unsigned int	nb_elem_total;
 	unsigned int	nb_elem_a;
 	unsigned int	nb_elem_b;
 	long int		*moves_a;
