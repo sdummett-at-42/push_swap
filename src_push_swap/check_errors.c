@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:40:41 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:23:34 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 11:44:13 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	check_errors_on_stacks_init(t_stacks *stacks, int ac, char **av)
 	{
 		write(2, "Error\n", 6);
 		clean_exit(stacks, 2);
-	}	
+	}
 }
 
 void	check_errors_on_duplicates(t_stacks *stacks)
@@ -40,5 +40,5 @@ void	check_errors_on_duplicates(t_stacks *stacks)
 	{
 		write(2, "Error\n", 6);
 		clean_exit(stacks, 3);
-	}	
+	}
 }
