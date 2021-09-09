@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 22:10:35 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:19:17 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:04:06 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** It checks if stack A is sorted
 */
 
-int	is_sorted(t_stacks *stacks)
+bool	is_sorted(t_stacks *stacks)
 {
 	unsigned int	i;
 

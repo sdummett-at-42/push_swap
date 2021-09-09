@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:40:41 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 11:44:13 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:04:52 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	check_errors_on_args(int ac, char **av)
 {
-	if (args_are_numbers(ac, av) == 0)
+	if (args_are_numbers(ac, av) == false)
 	{
 		write(2, "Error\n", 6);
 		exit(1);
@@ -36,7 +36,7 @@ void	check_errors_on_stacks_init(t_stacks *stacks, int ac, char **av)
 
 void	check_errors_on_duplicates(t_stacks *stacks)
 {
-	if (has_duplicates(stacks) == 1)
+	if (has_duplicates(stacks) == true)
 	{
 		write(2, "Error\n", 6);
 		clean_exit(stacks, 3);

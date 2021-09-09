@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 17:05:30 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:17:26 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:03:52 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** It checks if the string is a number or not
 */
 
-int	is_number(char *arg)
+bool	is_number(char *arg)
 {
 	int	i;
 

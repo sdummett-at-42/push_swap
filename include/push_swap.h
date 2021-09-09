@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:18:28 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:15:26 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdbool.h>
 
 typedef struct s_move_2
 {
@@ -72,12 +73,18 @@ typedef struct s_stacks
 }	t_stacks;
 
 /*
+** Debug funcs
+*/
+void			print_sorted(t_sorted *sorted);
+void			print_best_moves(t_stacks *stacks);
+void			print_moves(t_stacks *stacks);
+void			print_stacks(t_stacks *stacks);
+
+/*
 ** Stacks funcs
 */
-void			print_stacks(t_stacks *stacks);
 int				init_stacks(t_stacks *stacks, int ac, char **av);
 t_stacks		*create_stacks(int ac);
-void			print_stacks(t_stacks *stacks);
 
 /*
 ** Instructions funcs
@@ -100,16 +107,8 @@ void			reverse_rotate_a_b(t_stacks *stacks);
 int				ft_atoi_on_steroid(const char *str, unsigned char *overflow);
 void			*ft_calloc(size_t nmemb, size_t size);
 void			ft_bzero(void *b, size_t len);
-int				is_number(char *arg);
-int				has_duplicates(t_stacks *stacks);
 char			**ft_split(char const *s, char c);
-int				is_sorted(t_stacks *stacks);
 void			clean_exit(t_stacks *stacks, int exit_status);
-
-/*
-** Debug funcs
-*/
-void			print_sorted(t_sorted *sorted);
 
 /*
 ** Algorithm
@@ -121,16 +120,13 @@ int				get_min_number(t_stacks *stacks);
 int				get_max_number(t_stacks *stacks);
 unsigned int	get_index_min(t_stacks *stacks);
 unsigned int	get_index_max(t_stacks *stacks);
-int				is_circular_sorted(t_stacks *stacks);
 void			move_min_to_top_with_ra(t_stacks *stacks);
 void			move_min_to_top_with_rra(t_stacks *stacks);
 void			how_to_sort_circular_sorted_stack(t_stacks *stacks, t_move_2 *move_2);
 void			move_stack_a_into_b(t_stacks *stacks);
 void			count_moves(t_stacks *stacks);
-void			print_moves(t_stacks *stacks);
 unsigned int	get_next_value_index(t_stacks *stacks, int elem_to_sort);
 void			get_best_moves(t_stacks *stacks);
-void			print_best_moves(t_stacks *stacks);
 long int		get_index_best_moves(t_stacks *stacks);
 void			move_elem(t_stacks *stacks);
 void			circular_sort(t_stacks *stacks);
@@ -154,6 +150,10 @@ void			check_errors_on_duplicates(t_stacks *stacks);
 /*
 ** Boolean functions
 */
-int				args_are_numbers(int ac, char **av);
+bool			args_are_numbers(int ac, char **av);
+bool			has_duplicates(t_stacks *stacks);
+bool			is_circular_sorted(t_stacks *stacks);
+bool			is_number(char *arg);
+bool			is_sorted(t_stacks *stacks);
 
 #endif

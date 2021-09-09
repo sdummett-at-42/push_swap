@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   three_elements_sort.c                              :+:      :+:    :+:   */
+/*   init_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/05 13:01:39 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 12:06:22 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/09 12:19:43 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/09 12:26:05 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-** Entry function that sorts one, two or three elements
+** Initialiaze struct s_stacks
 */
 
-void	three_elements_sort(t_stacks *stacks)
+int	init_stacks(t_stacks *stacks, int ac, char **av)
 {
-	t_move_2	move_2;
+	unsigned int	i;
+	unsigned char	overflow;
 
-	while (1)
+	i = 0;
+	overflow = 0;
+	while (i != stacks->nb_elem_total)
 	{
-		if (is_circular_sorted(stacks) == true)
-		{
-			move_2.ra = 0;
-			move_2.rra = 0;
-			how_to_sort_circular_sorted_stack(stacks, &move_2);
-			if (move_2.ra == 1)
-				move_min_to_top_with_ra(stacks);
-			else if (move_2.rra == 1)
-				move_min_to_top_with_rra(stacks);
-			break ;
-		}
-		swap_a(stacks);
+		if (is_number(av[ac - 1]) == false)
+			return (1);
+		stacks->a[i] = ft_atoi_on_steroid(av[ac - 1], &overflow);
+		if (overflow == 1)
+			return (-1);
+		ac--;
+		i++;
 	}
+	stacks->sorted = sort_stack_a_into_another_tab(stacks);
+	return (0);
 }

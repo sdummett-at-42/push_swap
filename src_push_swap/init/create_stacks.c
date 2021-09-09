@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 20:57:34 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:22:07 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:21:00 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,4 @@ t_stacks	*create_stacks(int ac)
 	}
 	stacks->sorted = NULL;
 	return (stacks);
-}
-
-int	init_stacks(t_stacks *stacks, int ac, char **av)
-{
-	unsigned int	i;
-	unsigned char	overflow;
-
-	i = 0;
-	overflow = 0;
-	while (i != stacks->nb_elem_total)
-	{
-		if (is_number(av[ac - 1]) == 0)
-			return (1);
-		stacks->a[i] = ft_atoi_on_steroid(av[ac - 1], &overflow);
-		if (overflow == 1)
-			return (-1);
-		ac--;
-		i++;
-	}
-	stacks->sorted = sort_stack_a_into_another_tab(stacks);
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:39:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:24:21 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:09:04 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int ac, char **av)
 	stacks = create_stacks(ac);
 	check_errors_on_stacks_init(stacks, ac, av);
 	check_errors_on_duplicates(stacks);
-	if (is_sorted(stacks))
+	if (is_sorted(stacks) == true)
 		clean_exit(stacks, 0);
 	if (stacks->nb_elem_a <= 3)
 		three_elements_sort(stacks);

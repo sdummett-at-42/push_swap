@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/08 20:08:37 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/09 12:23:27 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,6 @@ SRC			= src_push_swap/push_swap.c \
 			  src_push_swap/utils/ft_atoi_on_steroid.c \
 			  src_push_swap/boolean/is_sorted.c \
 			  src_push_swap/utils/clean_exit.c \
-			  src_push_swap/stacks/stacks_utils.c \
 			  src_push_swap/algorithm/sort_stack_a_into_another_tab.c \
 			  src_push_swap/algorithm/get_median.c \
 			  src_push_swap/algorithm/split_until_median.c \
@@ -66,8 +65,10 @@ SRC			= src_push_swap/push_swap.c \
 			  src_push_swap/algorithm/move_opposite_way.c \
 			  src_push_swap/algorithm/move_same_way_bot.c \
 			  src_push_swap/algorithm/move_same_way_top.c \
-			  src_push_swap/check_errors.c \
-			  src_push_swap/boolean/args_are_numbers.c
+			  src_push_swap/init/check_errors.c \
+			  src_push_swap/boolean/args_are_numbers.c \
+			  src_push_swap/init/init_stacks.c \
+			  src_push_swap/init/create_stacks.c
 			  
 INC			= -Iinclude
 includes	= $(wildcard includes/*.h)

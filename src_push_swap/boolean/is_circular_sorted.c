@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 10:15:17 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:18:52 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:03:47 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** It checks if stack A is sorted circularly
 */
 
-int	is_circular_sorted(t_stacks *stacks)
+bool	is_circular_sorted(t_stacks *stacks)
 {
 	long int		i;
 	unsigned int	i_min;

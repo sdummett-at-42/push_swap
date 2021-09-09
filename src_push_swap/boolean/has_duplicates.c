@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 17:27:39 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/08 16:17:01 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:03:41 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** It checks if stack A have duplicates or not
 */
 
-int	has_duplicates(t_stacks *stacks)
+bool	has_duplicates(t_stacks *stacks)
 {
 	unsigned int	i;
 	unsigned int	j;
