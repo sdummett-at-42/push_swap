@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 19:00:47 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 02:11:06 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 13:56:41 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Instruction : rb
+*/
 
 void	rotate_b(t_stacks *stacks)
 {

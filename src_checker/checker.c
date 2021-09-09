@@ -6,36 +6,11 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:23:04 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 18:13:43 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 13:59:38 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-
-int	are_valid_instructions(t_instruc *lst)
-{
-	int	res;
-
-	while (lst != NULL)
-	{
-		res = 1;
-		is_sa(lst, &res);
-		is_sb(lst, &res);
-		is_ss(lst, &res);
-		is_pa(lst, &res);
-		is_pb(lst, &res);
-		is_ra(lst, &res);
-		is_rb(lst, &res);
-		is_rr(lst, &res);
-		is_rra(lst, &res);
-		is_rrb(lst, &res);
-		is_rrr(lst, &res);
-		if (res == 1)
-			return (0);
-		lst = lst->next;
-	}
-	return (1);
-}
 
 int	main(int ac, char **av)
 {

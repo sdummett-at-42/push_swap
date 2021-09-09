@@ -6,11 +6,15 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 19:18:02 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 02:10:50 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 13:55:51 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** Instruction : rrr
+*/
 
 void	rrr_reverse_rotate_a(t_stacks *stacks)
 {

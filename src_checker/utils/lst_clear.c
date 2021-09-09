@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate_b.c                                 :+:      :+:    :+:   */
+/*   lst_clear.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 19:17:16 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 13:56:59 by sdummett         ###   ########.fr       */
+/*   Created: 2021/09/09 14:08:59 by sdummett          #+#    #+#             */
+/*   Updated: 2021/09/09 14:10:01 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-/*
-** Instruction : rrb
-*/
-
-void	reverse_rotate_b(t_stacks *stacks)
+void	lst_clear(t_instruc **lst)
 {
-	int				tmp;
-	unsigned int	i;
+	t_instruc	*curr;
+	t_instruc	*tmp;
 
-	if (stacks->nb_elem_b < 2)
-		return ;
-	i = 0;
-	tmp = stacks->b[i];
-	while (i < stacks->nb_elem_b - 1)
+	if (*lst)
 	{
-		stacks->b[i] = stacks->b[i + 1];
-		i++;
+		curr = *lst;
+		while (curr)
+		{
+			tmp = curr->next;
+			free(curr->content);
+			free(curr);
+			curr = tmp;
+		}
 	}
-	stacks->b[i] = tmp;
+	*lst = NULL;
 }

@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/16 20:40:48 by sdummett          #+#    #+#              #
-#    Updated: 2021/09/09 12:58:25 by sdummett         ###   ########.fr        #
+#    Updated: 2021/09/09 14:42:37 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,11 +70,11 @@ SRC			= src_push_swap/push_swap.c \
 			  src_push_swap/init/create_stacks.c
 			  
 INC			= -Iinclude
-includes	= $(wildcard includes/*.h)
+includes	= $(wildcard include/*.h)
 OBJ			= $(SRC:.c=.o)
 SRCBONUS	= src_checker/checker.c \
-				src_checker/ft_atoi_on_steroid.c \
-				src_checker/clean_exit.c \
+				src_checker/utils/ft_atoi_on_steroid.c \
+				src_checker/utils/clean_exit.c \
 				src_checker/boolean/is_number.c \
 				src_checker/boolean/has_duplicates.c \
 				src_checker/debug/print_stacks.c \
@@ -91,11 +91,9 @@ SRCBONUS	= src_checker/checker.c \
 				src_checker/instructions/reverse_rotate_a_b.c \
 				src_checker/get_next_line/get_next_line_utils.c \
 				src_checker/get_next_line/get_next_line.c \
-				src_checker/stacks_utils/stacks_management.c \
-				src_checker/get_instructions.c \
-				src_checker/t_instruc_utils/t_instruc_utils.c \
-				src_checker/ft_memcmp.c \
-				src_checker/ft_strlen.c \
+				src_checker/instructions/get_instructions.c \
+				src_checker/utils/ft_memcmp.c \
+				src_checker/utils/ft_strlen.c \
 				src_checker/instructions_check/is_pa.c \
 				src_checker/instructions_check/is_pb.c \
 				src_checker/instructions_check/is_ra.c \
@@ -108,10 +106,15 @@ SRCBONUS	= src_checker/checker.c \
 				src_checker/instructions_check/is_sb.c \
 				src_checker/instructions_check/is_ss.c \
 				src_checker/boolean/is_sorted.c \
-				src_checker/do_instructions.c \
-				src_checker/check_errors/check_errors.c \
-				src_checker/boolean/args_are_numbers.c
-
+				src_checker/instructions/do_instructions.c \
+				src_checker/init/check_errors.c \
+				src_checker/boolean/args_are_numbers.c \
+				src_checker/boolean/are_valid_instructions.c \
+				src_checker/utils/lst_new.c \
+				src_checker/utils/lstadd_back.c \
+				src_checker/utils/lst_clear.c \
+				src_checker/init/create_stacks.c \
+				src_checker/init/init_stacks.c
 OBJBONUS	=$(SRCBONUS:.c=.o)
 
 # ************************************ #

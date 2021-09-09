@@ -6,13 +6,17 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 17:05:30 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/07 18:05:40 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 13:54:17 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-int	is_number(char *arg)
+/*
+** It checks if the string is a number or not
+*/
+
+bool	is_number(char *arg)
 {
 	int	i;
 

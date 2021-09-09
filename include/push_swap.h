@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:16:12 by sdummett          #+#    #+#             */
-/*   Updated: 2021/09/09 13:32:40 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/09/09 14:40:18 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct s_stacks
 }	t_stacks;
 
 /*
-** Structure to if we will do ra or rra in the algo
+** Structure to know if we will do ra or rra in the algo
 */
 typedef struct s_move
 {
