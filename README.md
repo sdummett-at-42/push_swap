@@ -12,7 +12,7 @@ Make to install the push_swap and checker program:
 ```sh
 make
 ```
-If you to install only push_swap:
+If you want to install only push_swap:
 ```sh
 make push_swap
 ```
