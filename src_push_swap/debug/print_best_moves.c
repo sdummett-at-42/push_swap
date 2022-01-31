@@ -14,9 +14,8 @@
 
 void	print_best_moves(t_stacks *stacks)
 {
-	unsigned int	i;
 	unsigned int	total;
-	i = 0;
+
 	if (stacks->nb_elem_a > stacks->nb_elem_b)
 		total = stacks->nb_elem_a;
 	else
